@@ -4,17 +4,16 @@ Les tâches sont ordonnées selon leurs dépendances. Les statuts sont mis à jo
 
 ## Phase 0 — Infrastructure
 
-- [ ] Vérifier la CI après l’ajout du paquet `lmodern` requis par XeLaTeX.
-- [ ] Vérifier le rendu français, la navigation et les liens internes du site.
-- [ ] Vérifier que le PDF d’aperçu est produit et téléchargeable comme artefact.
+- [x] Vérifier le build Web et le PDF dans GitHub Actions.
+- [ ] Vérifier l’artefact PDF et le rendu de caractères français.
 - [ ] Ajouter une vérification automatique des clés de citation et des liens locaux.
 - [ ] Compléter les métadonnées de citation et clarifier les licences contenu/code/figures.
 - [ ] Avant GitHub Pages public, choisir un moteur/thème Web maintenu à long terme. Material for MkDocs annonce sa fin de maintenance le 5 novembre 2026.
-- [ ] Évaluer l’activation de GitHub Pages après validation du prototype Web et choix du moteur.
 
-## Phase 1 — Fondations (prochaine rédaction)
+## Phase 1 — Fondations
 
-- [ ] De l’électricité au bit : états, niveaux logiques et représentation.
+- [x] De l’électricité au bit : niveaux logiques et abstraction numérique.
+- [ ] Binaire, hexadécimal et représentation des nombres.
 - [ ] Transistors, portes logiques et circuits séquentiels.
 - [ ] CPU, GPU, mémoire et calcul matriciel.
 - [ ] Vecteurs, matrices, fonctions, dérivées et descente de gradient.

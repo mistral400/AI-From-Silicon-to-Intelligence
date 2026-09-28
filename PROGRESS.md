@@ -4,30 +4,30 @@ Dernière mise à jour : 2026-09-28
 
 ## Statut général
 
-**Phase 0 — infrastructure : en cours de validation.** Le dépôt distant a été inspecté; il contenait le commit initial avec un README minimal et une licence MIT.
+**Phase 0 — infrastructure : validée par CI.** **Phase 1 — fondations : commencée.**
 
 ## Terminé
 
-- Dépôt GitHub confirmé : `mistral400/AI-From-Silicon-to-Intelligence`, branche par défaut `main`.
-- Droits de lecture et d’écriture confirmés par l’intégration GitHub.
-- Architecture éditoriale initiale, conventions de contribution, références et suivi de progression créés.
-- Build Web MkDocs exécuté avec succès en mode strict par GitHub Actions.
-- Le lien local hors du dossier documentaire a été corrigé après le premier échec du build Web.
+- Dépôt confirmé : `mistral400/AI-From-Silicon-to-Intelligence`, branche par défaut `main`.
+- Architecture éditoriale, conventions de contribution, roadmap, suivi de progression, système de références et système de figures créés.
+- Build Web MkDocs strict réussi dans GitHub Actions.
+- Build du PDF Pandoc/XeLaTeX réussi dans GitHub Actions après ajout des paquets LaTeX requis.
+- PDF d’aperçu téléversé comme artefact du workflow CI.
+- Premier chapitre de fond rédigé et sourcé : « De l’électricité au bit : niveaux logiques et abstraction numérique ».
 
-## En cours / à valider
+## Chapitres
 
-- Build PDF Pandoc/XeLaTeX. Le premier essai manquait `lmodern.sty`; après ajout de `lmodern`, il manque encore la métrique de police `pzdr`.
-- Le paquet `texlive-fonts-recommended` est ajouté au runner pour fournir les polices PostScript Base 35.
-- Vérifier les caractères français, les liens du site et la disponibilité de l’artefact PDF.
+| Chapitre | Statut | Dernière vérification |
+|---|---|---|
+| De l’électricité au bit : niveaux logiques et abstraction numérique | Premier jet, source primaire vérifiée; attente du build de contenu | 2026-09-28 |
 
-## Contenu rédigé
-
-Aucun chapitre de fond terminé. Les pages dans `book/` sont une page d’accueil, une table des matières et un gabarit; elles ne comptent pas comme chapitres terminés.
+Aucun autre chapitre n’est rédigé.
 
 ## Références et figures
 
-- Références : système BibTeX et rendu des citations prévu dans le PDF; vérifier les notices au moment de leur emploi.
-- Figures : identifiants et traçabilité définis; aucune figure originale n’a encore été produite.
+- BibTeX : entrée ajoutée pour le cours MIT OpenCourseWare 6.004, printemps 2017; informations vérifiées sur la page source le 2026-09-28.
+- Attention Is All You Need conservé dans la bibliographie de départ pour la future partie Transformers.
+- Aucune figure originale n’a encore été produite.
 
 ## Problèmes connus
 
@@ -35,8 +35,12 @@ Aucun chapitre de fond terminé. Les pages dans `book/` sont une page d’accuei
 - Material for MkDocs annonce sa fin de maintenance le 5 novembre 2026; choisir un moteur/thème maintenu avant publication Web publique.
 - Le format final du livre PDF et l’hébergement du site ne sont pas encore décidés.
 
-## Prochaine action exacte
+## Dernière étape terminée
 
-1. Vérifier la CI du commit de correction PDF.
-2. Si Web et PDF sont verts, noter le résultat et l’artefact dans ce fichier.
-3. Rédiger et sourcer « De l’électricité au bit : représentation et logique numérique » dans la partie I.
+Infrastructure de builds Web et PDF validée dans GitHub Actions.
+
+## Prochaine étape
+
+1. Vérifier que le nouveau chapitre apparaît dans la navigation Web et le PDF.
+2. Mettre à jour son statut selon le résultat du build.
+3. Ajouter le chapitre suivant : « Binaire, hexadécimal et représentation des nombres ».

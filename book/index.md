@@ -12,4 +12,4 @@ Les chapitres sont indépendants lorsque possible et indiquent les connaissances
 
 ## Statut éditorial
 
-La table des matières est un plan de travail, pas une promesse que chaque chapitre est déjà rédigé. L’avancement réel est consigné dans [PROGRESS.md](../PROGRESS.md).
+La table des matières est un plan de travail, pas une promesse que chaque chapitre est déjà rédigé. Pour suivre l’avancement général du projet, consultez [le tableau de bord du dépôt](https://github.com/mistral400/AI-From-Silicon-to-Intelligence/blob/main/PROGRESS.md).

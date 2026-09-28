@@ -54,7 +54,7 @@ def main() -> int:
     command = [
         "pandoc",
         *map(str, sources),
-        "--from=markdown",
+        "--from=markdown+tex_math_single_backslash",
         "--pdf-engine=xelatex",
         "--citeproc",
         f"--bibliography={ROOT / 'references' / 'references.bib'}",

@@ -4,24 +4,28 @@ Dernière mise à jour : 2026-09-28
 
 ## Statut général
 
-**Phase 0 — infrastructure : validée par GitHub Actions.** **Phase 1 — fondations : en cours.**
+**Phase 0 — infrastructure : validation visuelle du PDF en cours.** Le build Web strict et la génération PDF réussissent dans GitHub Actions. **Phase 1 — fondations : deux chapitres rédigés.**
 
 ## Terminé
 
 - Dépôt confirmé : `mistral400/AI-From-Silicon-to-Intelligence`, branche par défaut `main`.
 - Architecture éditoriale, conventions de contribution, roadmap, suivi de progression, système de références et système de figures créés.
 - Build Web MkDocs strict réussi.
-- PDF en français généré avec Pandoc/XeLaTeX, comprenant maintenant les chapitres rédigés, et téléversé comme artefact CI.
+- Le PDF inclut les deux chapitres selon `book/book-order.txt` et est téléversé comme artefact CI.
 - Affichage des équations Web configuré avec Arithmatex et MathJax 3.2.2.
 - Deux chapitres de fond rédigés, sourcés et intégrés à la navigation.
-- Dernier build complet avant la mise à jour du manifeste : [GitHub Actions](https://github.com/mistral400/AI-From-Silicon-to-Intelligence/actions/runs/36489292954).
+
+## En cours / à valider
+
+- Le premier PDF contenait bien les chapitres, mais Pandoc affichait les équations LaTeX comme texte brut.
+- L’option Pandoc `tex_math_single_backslash` est ajoutée pour interpréter les délimiteurs `\\[...\\]`; vérifier le nouvel artefact après CI.
 
 ## Chapitres
 
 | Chapitre | Statut | Dernière vérification |
 |---|---|---|
-| De l’électricité au bit : niveaux logiques et abstraction numérique | Premier jet; source primaire vérifiée; builds Web et PDF réussis | 2026-09-28 |
-| Binaire, hexadécimal et nombres entiers | Premier jet; source primaire vérifiée; builds Web et PDF réussis | 2026-09-28 |
+| De l’électricité au bit : niveaux logiques et abstraction numérique | Premier jet; source primaire vérifiée; build Web réussi; PDF math à revalider | 2026-09-28 |
+| Binaire, hexadécimal et nombres entiers | Premier jet; source primaire vérifiée; build Web réussi; PDF math à revalider | 2026-09-28 |
 
 Les builds valident la compilation et les liens locaux, mais ne remplacent pas une relecture éditoriale indépendante.
 
@@ -33,15 +37,15 @@ Les builds valident la compilation et les liens locaux, mais ne remplacent pas u
 
 ## Problèmes connus
 
-- Le manifeste PDF est nouveau et doit être validé avec les chapitres de fond.
+- Le manifeste PDF et l’affichage mathématique viennent d’être ajustés et nécessitent une dernière vérification visuelle.
 - La licence MIT actuelle ne précise pas clairement le statut des textes et figures.
 - Material for MkDocs annonce sa fin de maintenance le 5 novembre 2026; choisir un moteur/thème maintenu avant publication Web publique.
 - Le format final du livre PDF et l’hébergement du site ne sont pas encore décidés.
 
 ## Dernière étape terminée
 
-Deux chapitres de fondation ajoutés à la table des matières et à la navigation; correction en cours pour inclure ces sources dans le PDF.
+Deux chapitres de fondation sont ajoutés à la table des matières et à la navigation; le manifeste PDF les inclut.
 
 ## Prochaine étape
 
-Valider visuellement le PDF avec les deux chapitres. Ensuite rédiger et sourcer « Transistors, portes logiques et circuits séquentiels ».
+Vérifier les équations dans l’artefact PDF. Ensuite rédiger et sourcer « Transistors, portes logiques et circuits séquentiels ».

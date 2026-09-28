@@ -5,7 +5,7 @@ Les tâches sont ordonnées selon leurs dépendances. Les statuts sont mis à jo
 ## Phase 0 — Infrastructure
 
 - [x] Vérifier le build Web strict dans GitHub Actions.
-- [ ] Activer et vérifier le rendu des équations LaTeX dans le PDF de CI.
+- [ ] Vérifier le rendu des équations en ligne et en bloc dans le PDF de CI.
 - [x] Inclure les chapitres rédigés dans le manifeste PDF.
 - [x] Configurer l’affichage des équations sur le site Web.
 - [ ] Ajouter une vérification automatique des clés de citation et des liens locaux.

@@ -29,11 +29,11 @@ Les dossiers de contenu seront créés quand ils reçoivent des fichiers utiles;
 
 ## Site Web
 
-MkDocs Material lit `book/` et écrit le site statique dans `site/`. En local, après installation des dépendances de développement : `mkdocs build --strict`. Dans le projet, cette commande s’exécute dans GitHub Actions. L’hébergement n’est pas encore activé.
+MkDocs Material lit `book/` et écrit le site statique dans `site/`. Les formules utilisent l’extension Arithmatex et MathJax 3.2.2, chargé depuis jsDelivr. Cette dépendance au CDN concerne l’affichage Web; le PDF est composé par XeLaTeX. En local, après installation des dépendances de développement : `mkdocs build --strict`. Dans le projet, cette commande s’exécute dans GitHub Actions. L’hébergement n’est pas encore activé.
 
 ## PDF
 
-Le script `scripts/build_pdf.py` utilise Pandoc et XeLaTeX pour assembler l’accueil, la table des matières et le gabarit en un PDF d’aperçu. Le contenu final et l’ordre des chapitres seront pilotés par un manifeste de livre lors de la phase éditoriale. Le runner installe Pandoc, XeLaTeX et Latin Modern avant le build.
+Le script `scripts/build_pdf.py` utilise Pandoc et XeLaTeX pour assembler l’accueil, la table des matières et le gabarit en un PDF d’aperçu. Il applique le français, résout les citations avec citeproc et `references/references.bib`. Le contenu final et l’ordre des chapitres seront pilotés par un manifeste de livre lors de la phase éditoriale. Le runner installe Pandoc, XeLaTeX, Latin Modern, les polices PostScript Base 35 et les règles linguistiques françaises.
 
 ## CI et artefacts
 

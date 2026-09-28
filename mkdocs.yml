@@ -13,6 +13,12 @@ theme:
     - navigation.sections
     - navigation.top
     - content.code.copy
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
 nav:
   - Accueil: index.md
   - Table des matières: table-of-contents.md

@@ -1,0 +1,19 @@
+site_name: AI From Silicon to Intelligence
+site_description: Encyclopédie technique de l’intelligence artificielle moderne, des transistors aux systèmes.
+site_url: https://mistral400.github.io/AI-From-Silicon-to-Intelligence/
+repo_url: https://github.com/mistral400/AI-From-Silicon-to-Intelligence
+repo_name: mistral400/AI-From-Silicon-to-Intelligence
+docs_dir: book
+site_dir: site
+strict: true
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+nav:
+  - Accueil: index.md
+  - Table des matières: table-of-contents.md
+  - Gabarit de chapitre: chapter-template.md

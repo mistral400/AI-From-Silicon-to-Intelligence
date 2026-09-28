@@ -1,0 +1,7 @@
+# Build outputs
+/site/
+/pdf/*.pdf
+!pdf/.gitkeep
+__pycache__/
+*.py[cod]
+.venv/

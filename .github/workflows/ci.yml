@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5.1.0
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements-build.txt
+      - name: Install documentation tools
+        run: |
+          python -m pip install -r requirements-build.txt
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y pandoc texlive-xetex fonts-lmodern
+      - name: Build website
+        run: mkdocs build --strict
+      - name: Build PDF preview
+        run: python scripts/build_pdf.py --output pdf/preview.pdf
+      - name: Upload PDF preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-from-silicon-to-intelligence-pdf-preview
+          path: pdf/preview.pdf
+          if-no-files-found: error
+          retention-days: 14

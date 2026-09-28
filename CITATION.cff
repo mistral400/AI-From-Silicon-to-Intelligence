@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Citez ce dépôt en précisant le commit ou la version consultée."
+title: "AI From Silicon to Intelligence"
+type: software
+authors:
+  - family-names: "Rhéaume-Viale"
+    given-names: "Matisse"
+repository-code: "https://github.com/mistral400/AI-From-Silicon-to-Intelligence"

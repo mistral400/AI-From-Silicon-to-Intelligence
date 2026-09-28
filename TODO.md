@@ -5,7 +5,7 @@ Les tâches sont ordonnées selon leurs dépendances. Les statuts sont mis à jo
 ## Phase 0 — Infrastructure
 
 - [x] Vérifier le build Web strict dans GitHub Actions.
-- [x] Vérifier le build PDF en français et la présence de l’artefact de CI.
+- [ ] Inclure les chapitres rédigés dans le PDF et vérifier leur mise en page.
 - [x] Configurer l’affichage des équations sur le site Web.
 - [ ] Ajouter une vérification automatique des clés de citation et des liens locaux.
 - [ ] Compléter les métadonnées de citation et clarifier les licences contenu/code/figures.

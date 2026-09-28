@@ -1,0 +1,3 @@
+# One canonical Markdown source path per line, in PDF reading order.
+book/part-01-foundations/electricity-to-bit.md
+book/part-01-foundations/binary-and-integer-encoding.md

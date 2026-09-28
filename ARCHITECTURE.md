@@ -12,6 +12,7 @@ Tous les fichiers nécessaires au projet résident dans GitHub. Le contenu canon
 │   ├── index.md
 │   ├── table-of-contents.md
 │   ├── chapter-template.md
+│   ├── book-order.txt
 │   └── part-XX-topic/
 ├── diagrams/
 ├── examples/
@@ -33,7 +34,7 @@ MkDocs Material lit `book/` et écrit le site statique dans `site/`. Les formule
 
 ## PDF
 
-Le script `scripts/build_pdf.py` utilise Pandoc et XeLaTeX pour assembler l’accueil, la table des matières et le gabarit en un PDF d’aperçu. Il applique le français, résout les citations avec citeproc et `references/references.bib`. Le contenu final et l’ordre des chapitres seront pilotés par un manifeste de livre lors de la phase éditoriale. Le runner installe Pandoc, XeLaTeX, Latin Modern, les polices PostScript Base 35 et les règles linguistiques françaises.
+Le manifeste `book/book-order.txt` est la source de l’ordre des chapitres PDF; il contient un chemin Markdown par ligne. Le script `scripts/build_pdf.py` valide les entrées du manifeste, puis utilise Pandoc et XeLaTeX pour produire le PDF d’aperçu avec une table des matières réelle. Les nouveaux chapitres sont ajoutés au manifeste dans le même commit que leur création. Le script applique le français et résout les citations avec citeproc et `references/references.bib`. Le gabarit éditorial n’est pas inclus comme chapitre. Le runner installe Pandoc, XeLaTeX, Latin Modern, les polices PostScript Base 35 et les règles linguistiques françaises.
 
 ## CI et artefacts
 

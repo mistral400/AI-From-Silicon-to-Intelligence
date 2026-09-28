@@ -33,10 +33,14 @@ def main() -> int:
         *map(str, SOURCES),
         "--from=markdown",
         "--pdf-engine=xelatex",
+        "--citeproc",
+        f"--bibliography={ROOT / 'references' / 'references.bib'}",
         "--toc",
         "--number-sections",
+        "-V", "lang=fr-FR",
         "-V", "mainfont=Latin Modern Roman",
         "-V", "geometry:margin=25mm",
+        "-V", "toc-title=Table des matières",
         "-o", str(args.output),
     ]
     subprocess.run(command, cwd=ROOT, check=True)

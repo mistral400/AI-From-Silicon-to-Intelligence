@@ -4,39 +4,39 @@ Dernière mise à jour : 2026-09-28
 
 ## Statut général
 
-**Phase 0 — infrastructure : en cours.** Le dépôt distant a été inspecté : il contenait le commit initial avec un README minimal et une licence MIT. Le contenu de l’encyclopédie n’a pas encore commencé.
+**Phase 0 — infrastructure : en cours de validation.** Le dépôt distant a été inspecté : il contenait le commit initial avec un README minimal et une licence MIT.
 
 ## Terminé
 
 - Dépôt GitHub confirmé : `mistral400/AI-From-Silicon-to-Intelligence`, branche par défaut `main`.
 - Droits de lecture et d’écriture confirmés par l’intégration GitHub.
-- Architecture éditoriale initiale et conventions de contribution définies dans les fichiers de gouvernance.
-- Prototype des builds Web et PDF ajouté à la CI.
+- Architecture éditoriale initiale, conventions de contribution, références et suivi de progression créés.
+- Build Web MkDocs exécuté avec succès en mode strict par GitHub Actions.
+- Le lien local hors du dossier documentaire a été corrigé après le premier échec du build Web.
 
 ## En cours / à valider
 
-- Premier passage GitHub Actions : build MkDocs strict et build PDF.
-- Vérifier les liens internes, l’affichage des caractères français et la génération du PDF.
-- Confirmer que la table des matières couvre toutes les parties prévues dans le cahier des charges.
+- Build PDF Pandoc/XeLaTeX. Le premier essai a échoué, car le runner manquait `lmodern.sty`.
+- Le paquet LaTeX `lmodern`, les paquets de français, et les options de langue et de citations ont été ajoutés; attendre la CI.
+- Vérifier les caractères français, les liens du site et la disponibilité de l’artefact PDF.
 
 ## Contenu rédigé
 
-Aucun chapitre de fond terminé. Les pages présentes dans `book/` sont des pages d’accueil, une table des matières et un gabarit; elles ne comptent pas comme chapitres terminés.
+Aucun chapitre de fond terminé. Les pages dans `book/` sont une page d’accueil, une table des matières et un gabarit; elles ne comptent pas comme chapitres terminés.
 
 ## Références et figures
 
-- Références : système de clés BibTeX établi; bibliographie de départ à enrichir et vérifier au moment de rédiger.
-- Figures : politique d’identifiants et de traçabilité définie; aucune figure originale n’a encore été produite.
+- Références : système BibTeX et rendu des citations prévu dans le PDF; vérifier les notices au moment de leur emploi.
+- Figures : identifiants et traçabilité définis; aucune figure originale n’a encore été produite.
 
 ## Problèmes connus
 
 - La licence MIT actuelle ne précise pas clairement le statut des textes et figures.
-- La publication GitHub Pages et le format du livre PDF final ne sont pas encore configurés.
-- La table des matières constitue une structure initiale; son découpage sera ajusté pendant la rédaction.
+- Material for MkDocs annonce sa fin de maintenance le 5 novembre 2026; choisir un moteur/thème maintenu avant publication Web publique.
+- Le format final du livre PDF et l’hébergement du site ne sont pas encore décidés.
 
 ## Prochaine action exacte
 
-1. Lire le résultat du workflow `CI` déclenché par le commit de fondation.
-2. Corriger tout échec de build ou de rendu.
-3. Mettre à jour ce fichier avec le SHA et les résultats vérifiés.
-4. Une fois la CI verte, rédiger et sourcer le premier chapitre de fondation : « De l’électricité au bit : représentation et logique numérique ».
+1. Vérifier la CI du commit de correction PDF.
+2. Si Web et PDF sont verts, noter le résultat et l’artefact dans ce fichier.
+3. Rédiger et sourcer « De l’électricité au bit : représentation et logique numérique » dans la partie I.

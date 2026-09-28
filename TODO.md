@@ -4,8 +4,8 @@ Les tâches sont ordonnées selon leurs dépendances. Les statuts sont mis à jo
 
 ## Phase 0 — Infrastructure
 
-- [ ] Corriger et revérifier le build PDF après le premier échec XeLaTeX.
-- [ ] Vérifier rendu français, navigation et liens internes du site.
+- [ ] Vérifier la CI après l’ajout du paquet `lmodern` requis par XeLaTeX.
+- [ ] Vérifier le rendu français, la navigation et les liens internes du site.
 - [ ] Vérifier que le PDF d’aperçu est produit et téléchargeable comme artefact.
 - [ ] Ajouter une vérification automatique des clés de citation et des liens locaux.
 - [ ] Compléter les métadonnées de citation et clarifier les licences contenu/code/figures.

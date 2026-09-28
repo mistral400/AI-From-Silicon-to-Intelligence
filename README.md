@@ -6,7 +6,7 @@ Le projet explique comment l’IA moderne est conçue, entraînée, exécutée e
 
 ## État du projet
 
-Le dépôt est en phase de fondation. L’architecture éditoriale, les règles de contribution et les builds Web et PDF sont en cours de mise en place. Aucun chapitre de fond n’est déclaré terminé avant vérification technique et éditoriale.
+Le projet est en phase de fondation. L’infrastructure de départ est validée par GitHub Actions : les builds Web strict et PDF passent, et le PDF d’aperçu est conservé comme artefact CI. Deux chapitres des fondations sont rédigés en premier jet.
 
 - Avancement détaillé : [PROGRESS.md](PROGRESS.md)
 - Prochaines tâches : [TODO.md](TODO.md)
@@ -16,9 +16,9 @@ Le dépôt est en phase de fondation. L’architecture éditoriale, les règles 
 
 ## Lire et construire
 
-La version Web est générée avec MkDocs Material à partir des fichiers Markdown dans `book/`. Le PDF est assemblé avec Pandoc et XeLaTeX à partir de la même source.
+La version Web est générée avec MkDocs Material à partir des fichiers Markdown dans `book/`. Le PDF est assemblé avec Pandoc et XeLaTeX à partir des mêmes sources.
 
-Les deux builds tournent dans GitHub Actions; aucun ordinateur personnel n’est requis. Les commandes de build sont dans [ARCHITECTURE.md](ARCHITECTURE.md). Le PDF produit par la CI est un artefact de validation, pas encore une édition publiée.
+Les deux builds tournent dans GitHub Actions; aucun ordinateur personnel n’est requis. Le PDF produit par la CI est un artefact de validation, pas encore une édition complète du livre.
 
 ## Principes
 

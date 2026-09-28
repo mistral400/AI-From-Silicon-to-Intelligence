@@ -4,7 +4,7 @@ Dernière mise à jour : 2026-09-28
 
 ## Statut général
 
-**Phase 0 — infrastructure : en cours de validation.** Le dépôt distant a été inspecté : il contenait le commit initial avec un README minimal et une licence MIT.
+**Phase 0 — infrastructure : en cours de validation.** Le dépôt distant a été inspecté; il contenait le commit initial avec un README minimal et une licence MIT.
 
 ## Terminé
 
@@ -16,8 +16,8 @@ Dernière mise à jour : 2026-09-28
 
 ## En cours / à valider
 
-- Build PDF Pandoc/XeLaTeX. Le premier essai a échoué, car le runner manquait `lmodern.sty`.
-- Le paquet LaTeX `lmodern`, les paquets de français, et les options de langue et de citations ont été ajoutés; attendre la CI.
+- Build PDF Pandoc/XeLaTeX. Le premier essai manquait `lmodern.sty`; après ajout de `lmodern`, il manque encore la métrique de police `pzdr`.
+- Le paquet `texlive-fonts-recommended` est ajouté au runner pour fournir les polices PostScript Base 35.
 - Vérifier les caractères français, les liens du site et la disponibilité de l’artefact PDF.
 
 ## Contenu rédigé

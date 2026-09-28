@@ -24,4 +24,5 @@ nav:
   - Table des matières: table-of-contents.md
   - Fondations:
       - De l’électricité au bit: part-01-foundations/electricity-to-bit.md
+      - Binaire et entiers: part-01-foundations/binary-and-integer-encoding.md
   - Gabarit de chapitre: chapter-template.md

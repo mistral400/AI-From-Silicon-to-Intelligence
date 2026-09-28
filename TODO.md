@@ -14,9 +14,9 @@ Les tâches sont ordonnées selon leurs dépendances. Les statuts sont mis à jo
 ## Phase 1 — Fondations
 
 - [x] De l’électricité au bit : niveaux logiques et abstraction numérique.
-- [ ] Binaire, hexadécimal et représentation des nombres.
+- [x] Binaire, hexadécimal et nombres entiers.
 - [ ] Transistors, portes logiques et circuits séquentiels.
-- [ ] CPU, GPU, mémoire et calcul matriciel.
+- [ ] CPU, GPU, accélérateurs, mémoire et calcul matriciel.
 - [ ] Vecteurs, matrices, fonctions, dérivées et descente de gradient.
 - [ ] Probabilités, entropie et information.
 - [ ] Perceptrons, couches, activations et rétropropagation.

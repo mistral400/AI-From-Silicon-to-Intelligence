@@ -2,6 +2,11 @@
 
 Les changements éditoriaux et techniques importants sont consignés ici. Les entrées de contenu citeront les chapitres concernés; les releases suivront le versionnement sémantique lorsqu’un premier livre publiable existera.
 
+## 2026-09-28 — Chapitre de fondation 2
+
+- Ajout des conversions binaire, décimale et hexadécimale, des entiers non signés et signés, du complément à deux et du débordement.
+- Ajout d’exemples calculés et d’une référence au cours MIT OpenCourseWare 6.004, printemps 2017.
+
 ## 2026-09-28 — Chapitre de fondation 1
 
 - Ajout de l’explication des niveaux logiques, zones indéterminées et marges au bruit.

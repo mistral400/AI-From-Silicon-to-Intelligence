@@ -4,7 +4,7 @@ Dernière mise à jour : 2026-09-28
 
 ## Statut général
 
-**Phase 0 — infrastructure : validée par GitHub Actions.** **Phase 1 — fondations : commencée.**
+**Phase 0 — infrastructure : validée par GitHub Actions.** **Phase 1 — fondations : en cours.**
 
 ## Terminé
 
@@ -13,21 +13,20 @@ Dernière mise à jour : 2026-09-28
 - Build Web MkDocs strict réussi.
 - PDF Pandoc/XeLaTeX en français généré avec succès et téléversé comme artefact CI.
 - Affichage des équations configuré sur le site avec Arithmatex et MathJax 3.2.2.
-- Premier chapitre de fond rédigé et validé par les builds : « De l’électricité au bit : niveaux logiques et abstraction numérique ».
-
-La validation des builds ne remplace pas une relecture éditoriale indépendante.
+- Deux premiers chapitres de fond rédigés, sourcés et intégrés à la navigation.
 
 ## Chapitres
 
 | Chapitre | Statut | Dernière vérification |
 |---|---|---|
 | De l’électricité au bit : niveaux logiques et abstraction numérique | Premier jet; source primaire vérifiée; builds Web et PDF réussis | 2026-09-28 |
+| Binaire, hexadécimal et nombres entiers | Premier jet; source primaire vérifiée; attente du build de contenu | 2026-09-28 |
 
-Aucun autre chapitre n’est rédigé.
+La validation des builds ne remplace pas une relecture éditoriale indépendante.
 
 ## Références et figures
 
-- BibTeX : entrée ajoutée pour MIT OpenCourseWare 6.004, printemps 2017; seuils, zone indéterminée et marges au bruit vérifiés sur le cours.
+- BibTeX : entrées ajoutées pour MIT OpenCourseWare 6.004, printemps 2017; représentation numérique et logique vérifiées sur le cours.
 - Attention Is All You Need conservé dans la bibliographie de départ pour la future partie Transformers.
 - Aucune figure originale n’a encore été produite.
 
@@ -36,12 +35,12 @@ Aucun autre chapitre n’est rédigé.
 - La licence MIT actuelle ne précise pas clairement le statut des textes et figures.
 - Material for MkDocs annonce sa fin de maintenance le 5 novembre 2026; choisir un moteur/thème maintenu avant publication Web publique.
 - Le format final du livre PDF et l’hébergement du site ne sont pas encore décidés.
-- Le PDF actuel est un aperçu de l’accueil, du plan et des pages de fondation rédigées; il ne constitue pas encore le livre complet.
+- Le PDF actuel est un aperçu, pas le livre complet.
 
 ## Dernière étape terminée
 
-Premier chapitre de fond ajouté à la navigation et vérifié par les builds Web et PDF dans GitHub Actions.
+Deux chapitres de fondation ajoutés à la table des matières et à la navigation.
 
 ## Prochaine étape
 
-Rédiger et sourcer « Binaire, hexadécimal et représentation des nombres », puis mettre à jour la table des matières et ce fichier.
+Vérifier le build du deuxième chapitre. Ensuite rédiger « Transistors, portes logiques et circuits séquentiels » et mettre à jour la table des matières.

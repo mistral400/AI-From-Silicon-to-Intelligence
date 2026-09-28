@@ -5,7 +5,7 @@ Cette structure initiale organise les sujets du cahier des charges par dépendan
 ## Partie I — Des électrons aux ordinateurs
 
 1. [De l’électricité au bit : niveaux logiques et abstraction numérique](part-01-foundations/electricity-to-bit.md)
-2. Systèmes binaire, hexadécimal et représentation des nombres
+2. [Binaire, hexadécimal et nombres entiers](part-01-foundations/binary-and-integer-encoding.md)
 3. Transistors, portes logiques et circuits séquentiels
 4. CPU, GPU, accélérateurs et calcul parallèle
 5. Mémoire, stockage, bande passante et latence

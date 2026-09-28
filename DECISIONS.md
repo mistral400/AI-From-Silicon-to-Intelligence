@@ -11,7 +11,7 @@ Les décisions ci-dessous préservent la continuité entre les sessions. Les cha
 ## 2026-09-28 — Source et builds
 
 - Les fichiers éditoriaux canoniques résident dans `book/`.
-- MkDocs Material transforme ces fichiers en site statique.
+- MkDocs Material est utilisé uniquement comme prototype de site; le contenu Markdown reste indépendant du thème.
 - Pandoc et XeLaTeX assemblent le PDF à partir des mêmes sources Markdown. Le PDF de CI est un aperçu de validation; le format de publication reste à décider.
 - La CI vérifie les builds sur GitHub-hosted runners. Aucun ordinateur personnel n’est nécessaire.
 
@@ -29,6 +29,7 @@ Les décisions ci-dessous préservent la continuité entre les sessions. Les cha
 
 ## À revoir
 
+- Choix d’un générateur/thème Web maintenu à long terme avant publication; Material for MkDocs annonce la fin de sa maintenance le 2026-11-05.
 - Hébergement public du site et workflow de déploiement.
 - Licence du contenu et politique d’acceptation des contributions.
 - Format final du PDF et stratégie d’indexation.

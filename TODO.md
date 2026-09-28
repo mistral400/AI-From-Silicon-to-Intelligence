@@ -4,12 +4,13 @@ Les tâches sont ordonnées selon leurs dépendances. Les statuts sont mis à jo
 
 ## Phase 0 — Infrastructure
 
-- [ ] Vérifier le premier workflow GitHub Actions et corriger les échecs.
+- [ ] Corriger et revérifier le build PDF après le premier échec XeLaTeX.
 - [ ] Vérifier rendu français, navigation et liens internes du site.
 - [ ] Vérifier que le PDF d’aperçu est produit et téléchargeable comme artefact.
 - [ ] Ajouter une vérification automatique des clés de citation et des liens locaux.
 - [ ] Compléter les métadonnées de citation et clarifier les licences contenu/code/figures.
-- [ ] Évaluer l’activation de GitHub Pages après validation du prototype Web.
+- [ ] Avant GitHub Pages public, choisir un moteur/thème Web maintenu à long terme. Material for MkDocs annonce sa fin de maintenance le 5 novembre 2026.
+- [ ] Évaluer l’activation de GitHub Pages après validation du prototype Web et choix du moteur.
 
 ## Phase 1 — Fondations (prochaine rédaction)
 

@@ -7,6 +7,7 @@ Nommer les figures `fig-<partie>-<sujet>-<numéro>`, par exemple `fig-05-attenti
 ## Figures originales
 
 - `book/figures/fig-03-mlp-01.png` et `book/figures/fig-03-activations-01.png` sont générées par `scripts/generate_figures.py` avec Matplotlib 3.10.8. Reproduction : `python scripts/generate_figures.py`. La CI vérifie que les images suivies correspondent au script avec `python scripts/generate_figures.py --check`.
+- `book/figures/fig-04-qkv-attention-01.png` et `book/figures/fig-04-decoder-block-01.png` suivent la même procédure reproductible.
 - Ces figures sont des schémas et courbes mathématiques créés pour ce dépôt; elles n’utilisent pas de données ou d’illustrations tierces.
 
 ## Fiche de traçabilité

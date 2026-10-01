@@ -8,7 +8,13 @@ Les changements éditoriaux et techniques importants sont consignés ici. Les en
 - Ajout d’un schéma de réseau multicouche et d’un graphique d’activations générés par un script reproductible; création du glossaire initial.
 - Réorganisation de la table des matières pour éviter de planifier séparément la théorie de l’information déjà couverte et les sous-sujets réunis dans le nouveau chapitre.
 - Passage du PDF en A4, 11 pt, avec un sommaire d’une page, des liens colorés et la résolution des images partagées Web/PDF.
-- Validateur de références/liens, quatorze tests, build Web strict, vérification locale des figures et build PDF de 49 pages réussis. Le run CI de la branche `work` et la revalidation des sources externes restent ouverts.
+- Validateur de références/liens, quatorze tests, build Web strict, vérification des figures et build PDF de 49 pages réussis en local et dans le run CI `36875895430`. Son artefact a été parcouru; la revalidation des sources externes reste ouverte.
+
+## 2026-10-01 — Attention Q/K/V et architecture Transformer
+
+- Ajout de premiers jets sur l’attention à produit scalaire, les masques, les têtes multiples, l’encodeur-décodeur et le décodeur causal.
+- Ajout de deux figures originales reproductibles, de calculs à la main, d’exercices et de termes au glossaire.
+- Intégration Web/PDF, quatorze tests, validation des références/liens, vérification des quatre figures et build PDF local de 58 pages réussis. Le run CI du nouvel état et les pages de sources externes restent à vérifier.
 
 ## 2026-10-01 — Probabilités, entropie et information
 

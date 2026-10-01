@@ -1,6 +1,6 @@
 # Glossaire
 
-Ce glossaire définit les termes déjà utilisés dans les chapitres disponibles. Il sera complété avec les parties sur les Transformers, l’inférence, l’entraînement et l’infrastructure.
+Ce glossaire définit les termes déjà utilisés dans les chapitres disponibles. Il sera complété avec les parties sur l’inférence, l’entraînement et l’infrastructure.
 
 ## A–C
 
@@ -10,6 +10,8 @@ Ce glossaire définit les termes déjà utilisés dans les chapitres disponibles
 
 **ALU (*arithmetic logic unit*, unité arithmétique et logique) —** partie d’un processeur qui effectue des opérations arithmétiques et booléennes.
 
+**Attention croisée —** attention où les requêtes proviennent d’une séquence et les clés et valeurs d’une autre.
+
 **Bande passante mémoire —** quantité de données qu’une interface mémoire peut transférer par unité de temps, souvent exprimée en octets par seconde.
 
 **Biais —** paramètre ajouté au produit pondéré des entrées d’un neurone; il permet de décaler la transformation ou son seuil.
@@ -17,6 +19,8 @@ Ce glossaire définit les termes déjà utilisés dans les chapitres disponibles
 **Bit —** unité d’information binaire qui distingue deux états, conventionnellement notés 0 et 1.
 
 **Cache —** mémoire de petite capacité et d’accès rapide qui conserve des données susceptibles d’être réutilisées.
+
+**Clé (*key*) —** projection d’un vecteur de jeton utilisée par une requête pour calculer un score d’attention.
 
 **Circuit combinatoire —** circuit dont la sortie dépend des entrées présentes, sans état mémorisé par le circuit lui-même.
 
@@ -27,6 +31,8 @@ Ce glossaire définit les termes déjà utilisés dans les chapitres disponibles
 **CPU (*central processing unit*, processeur central) —** processeur polyvalent qui exécute des instructions et coordonne des calculs et transferts de données.
 
 ## D–G
+
+**Décodeur causal —** pile de blocs Transformer dont le masque empêche chaque position de consulter les jetons futurs.
 
 **Dérivée —** taux de variation local d’une fonction par rapport à une variable; elle donne sa pente instantanée lorsque la fonction est dérivable.
 
@@ -42,6 +48,8 @@ Ce glossaire définit les termes déjà utilisés dans les chapitres disponibles
 
 ## L–P
 
+**Masque causal —** matrice qui interdit à la position (i) d’utiliser l’information des positions (j>i).
+
 **Latence —** durée entre une demande ou un événement et l’obtention de sa réponse ou de son effet.
 
 **Logit —** score réel produit avant normalisation probabiliste, souvent par la dernière couche d’un classifieur.
@@ -56,14 +64,22 @@ Ce glossaire définit les termes déjà utilisés dans les chapitres disponibles
 
 **Perceptron —** classifieur à seuil fondé sur une combinaison affine des entrées; sa frontière de décision est linéaire.
 
+**Position, encodage de —** signal ajouté ou autrement appliqué aux représentations pour distinguer l’ordre des jetons.
+
 **Propagation avant —** calcul successif des activations d’un réseau, des entrées vers la sortie.
 
 ## R–T
 
-**Rétropropagation —** application de la règle de chaîne de la sortie vers les premières couches pour calculer les gradients des paramètres d’un réseau.
-
 **ReLU (*rectified linear unit*) —** fonction d’activation \(\max(0,x)\).
+
+**Requête (*query*) —** projection d’un vecteur de jeton comparée aux clés dans le calcul d’attention.
+
+**Rétropropagation —** application de la règle de chaîne de la sortie vers les premières couches pour calculer les gradients des paramètres d’un réseau.
 
 **Taux d’apprentissage —** taille du pas utilisé par une règle d’optimisation pour modifier les paramètres à partir d’un gradient.
 
 **Tenseur —** tableau numérique à un ou plusieurs axes; le nombre d’axes est distinct du rang d’une matrice au sens de l’algèbre linéaire.
+
+**Valeur (*value*) —** projection d’un vecteur de jeton combinée avec les autres valeurs selon les poids d’attention.
+
+**Transformer —** architecture neuronale construite autour de mécanismes d’attention, de réseaux feed-forward et de connexions résiduelles.

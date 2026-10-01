@@ -37,6 +37,9 @@ nav:
       - Descente de gradient et optimisation: part-01-foundations/gradient-descent-optimization.md
   - Réseaux neuronaux:
       - Perceptron et rétropropagation: part-02-neural-networks/perceptron-forward-backpropagation.md
+  - Transformers:
+      - Attention Q/K/V: part-03-transformers/attention-qkv.md
+      - Architecture Transformer: part-03-transformers/transformer-architecture.md
   - Annexes:
       - Glossaire: glossary.md
   - Gabarit de chapitre: chapter-template.md

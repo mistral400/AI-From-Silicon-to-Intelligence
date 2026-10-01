@@ -27,8 +27,8 @@ Cette structure initiale organise les sujets du cahier des charges par dépendan
 
 14. Tokenisation et vocabulaire
 15. Embeddings et représentation positionnelle
-16. Attention : requêtes, clés et valeurs (Q/K/V)
-17. Architecture Transformer, encodeur, décodeur et variantes
+16. [Attention : requêtes, clés et valeurs (Q/K/V)](part-03-transformers/attention-qkv.md)
+17. [Architecture Transformer, encodeur, décodeur et variantes](part-03-transformers/transformer-architecture.md)
 18. Préentraînement causal et prédiction du prochain token
 19. Contexte, fenêtres de contexte et limites
 20. MoE (Mixture of Experts) et routage

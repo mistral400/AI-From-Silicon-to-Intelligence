@@ -60,7 +60,7 @@ Pour le niveau haut :
 NM_H = V_{OH} - V_{IH}
 \]
 
-Une marge positive signifie qu’un peu de bruit peut modifier la tension sans faire franchir le seuil reconnu par le récepteur. Les niveaux de sortie et d’entrée sont choisis pour laisser ces marges, ce qui rend les circuits composés plus robustes. L’analyse par seuils et marges est au cœur de l’abstraction numérique enseignée dans le cours *Computation Structures* du MIT. [MIT OpenCourseWare (2017)](#references)
+Une marge positive signifie qu’un peu de bruit peut modifier la tension sans faire franchir le seuil reconnu par le récepteur. Les niveaux de sortie et d’entrée sont choisis pour laisser ces marges, ce qui rend les circuits composés plus robustes. L’analyse par seuils et marges est au cœur de l’abstraction numérique enseignée dans le cours *Computation Structures* du MIT. [MIT OpenCourseWare (2017)](#ref-mitcompstruct2017)
 
 ### Exemple numérique illustratif
 
@@ -107,5 +107,7 @@ La même suite de bits peut avoir une autre signification si le système choisit
 Le bit est une abstraction d’information. Dans un circuit, on représente souvent ses deux états par des plages de tension séparées par une zone non garantie. Les marges entre sorties et seuils d’entrée donnent une tolérance au bruit. Enfin, une suite de bits n’a de sens qu’avec une convention d’encodage.
 
 ## Références
+
+### MIT OpenCourseWare (2017) {#ref-mitcompstruct2017}
 
 - MIT OpenCourseWare. « 2 The Digital Abstraction », *Computation Structures*, cours 6.004, printemps 2017. Seuils de tension, zone interdite, spécifications combinatoires et marges au bruit. Consulté le 28 septembre 2026. [Page du cours](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c2/). Clé bibliographique : `mitcompstruct2017`.

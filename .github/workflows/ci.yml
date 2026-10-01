@@ -29,6 +29,10 @@ jobs:
           python -m pip install -r requirements-build.txt
           sudo apt-get update
           sudo apt-get install --no-install-recommends -y pandoc texlive-xetex texlive-latex-extra texlive-lang-french texlive-fonts-recommended lmodern fonts-lmodern
+      - name: Validate citations and local links
+        run: python scripts/validate_references.py
+      - name: Run reference-validator tests
+        run: python -m unittest discover -s tests
       - name: Build website
         run: mkdocs build --strict
       - name: Build PDF preview

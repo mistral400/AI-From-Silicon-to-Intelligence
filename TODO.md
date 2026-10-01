@@ -8,8 +8,9 @@ Les tâches sont ordonnées selon leurs dépendances. Les statuts sont mis à jo
 - [ ] Vérifier le rendu des équations en ligne et en bloc dans le PDF de CI.
 - [x] Inclure les chapitres rédigés dans le manifeste PDF.
 - [x] Configurer l’affichage des équations sur le site Web.
-- [ ] Ajouter une vérification automatique des clés de citation et des liens locaux.
-- [ ] Compléter les métadonnées de citation et clarifier les licences contenu/code/figures.
+- [x] Ajouter une vérification automatique des clés de citation, des métadonnées essentielles et des liens locaux, exécutée par la CI.
+- [x] Compléter les métadonnées des références et vérifier les champs bibliographiques essentiels.
+- [ ] Clarifier séparément les licences du contenu, du code et des figures.
 - [ ] Avant GitHub Pages public, choisir un moteur/thème Web maintenu à long terme. Material for MkDocs annonce sa fin de maintenance le 5 novembre 2026.
 
 ## Phase 1 — Fondations

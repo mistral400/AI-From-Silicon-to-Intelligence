@@ -78,7 +78,7 @@ La base 16 utilise les chiffres 0 à 9 puis les lettres A à F, où A vaut 10, B
 
 Pour convertir \(0111\ 1101\ 0000_2\), regroupe les bits en paquets de quatre depuis la droite : \(0111=7\), \(1101=D\), \(0000=0\). Le résultat s’écrit \(0x7D0\). Le préfixe `0x` indique généralement qu’un nombre est écrit en hexadécimal.
 
-On peut retrouver sa valeur décimale : \(7\times16^2 + 13\times16^1 + 0 = 1792+208=2000\). L’hexadécimal est pratique pour lire des masques, des adresses, des registres et de longues suites binaires, car il est compact et se reconvertit directement en bits. [MIT OpenCourseWare (2017)](#references)
+On peut retrouver sa valeur décimale : \(7\times16^2 + 13\times16^1 + 0 = 1792+208=2000\). L’hexadécimal est pratique pour lire des masques, des adresses, des registres et de longues suites binaires, car il est compact et se reconvertit directement en bits. [MIT OpenCourseWare (2017)](#ref-mitcompstructinfo2017)
 
 ### Entiers signés : complément à deux
 
@@ -125,5 +125,7 @@ Quand tu lis une donnée, note donc sa largeur, sa base et son type. « 11110110
 La représentation positionnelle utilise des puissances de la base. Le binaire encode les valeurs avec des bits; l’hexadécimal regroupe quatre bits par chiffre. Pour interpréter un motif, précise toujours la largeur et le type. Le complément à deux permet l’arithmétique signée sur une largeur fixe, mais n’élimine pas le débordement.
 
 ## Références
+
+### MIT OpenCourseWare (2017) {#ref-mitcompstructinfo2017}
 
 - MIT OpenCourseWare. « 1 Basics of Information », *Computation Structures*, cours 6.004, printemps 2017. Encodages, entiers binaires non signés, hexadécimal et complément à deux. Consulté le 28 septembre 2026. [Page du cours](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c1/). Clé bibliographique : `mitcompstructinfo2017`.

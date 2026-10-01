@@ -38,4 +38,4 @@ Résumer les liens conceptuels sans répéter le chapitre.
 
 ## Références
 
-Citer les sources dans le texte avec des clés BibTeX, par exemple `[@vaswani2017]`. Chaque clé doit exister dans `references/references.bib`.
+Relier chaque citation à son entrée bibliographique avec une ancre stable dérivée de la clé BibTeX (par exemple, l’ancre ref-cle-bibtex pour la clé cle-bibtex). Donner à chaque entrée un titre avec cet identifiant explicite. Toute clé doit exister dans references/references.bib.

@@ -6,7 +6,7 @@ Cette structure initiale organise les sujets du cahier des charges par dépendan
 
 1. [De l’électricité au bit : niveaux logiques et abstraction numérique](part-01-foundations/electricity-to-bit.md)
 2. [Binaire, hexadécimal et nombres entiers](part-01-foundations/binary-and-integer-encoding.md)
-3. Transistors, portes logiques et circuits séquentiels
+3. [Transistors, portes logiques et circuits séquentiels](part-01-foundations/transistors-logic-sequential.md)
 4. CPU, GPU, accélérateurs et calcul parallèle
 5. Mémoire, stockage, bande passante et latence
 6. Calcul matriciel et précision numérique

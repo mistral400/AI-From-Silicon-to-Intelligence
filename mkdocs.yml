@@ -14,6 +14,7 @@ theme:
     - navigation.top
     - content.code.copy
 markdown_extensions:
+  - attr_list
   - pymdownx.arithmatex:
       generic: true
 extra_javascript:
@@ -25,4 +26,5 @@ nav:
   - Fondations:
       - De l’électricité au bit: part-01-foundations/electricity-to-bit.md
       - Binaire et entiers: part-01-foundations/binary-and-integer-encoding.md
+      - Transistors et circuits logiques: part-01-foundations/transistors-logic-sequential.md
   - Gabarit de chapitre: chapter-template.md

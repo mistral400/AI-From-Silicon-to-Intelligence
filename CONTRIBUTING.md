@@ -18,6 +18,8 @@ Avant de proposer une contribution :
 
 ```sh
 python -m pip install -r requirements-build.txt
+python scripts/validate_references.py
+python -m unittest discover -s tests
 mkdocs build --strict
 python scripts/build_pdf.py --output pdf/preview.pdf
 ```

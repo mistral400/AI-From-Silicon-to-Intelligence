@@ -7,7 +7,7 @@ Privilégier les sources primaires et stables : articles de recherche, spécific
 ## Citations
 
 - Chaque affirmation technique non élémentaire reçoit une citation au plus près du texte.
-- Les citations utilisent une clé BibTeX stable, par exemple `[@vaswani2017]`.
+- Dans les chapitres, chaque citation pointe vers son entrée bibliographique au moyen d’une ancre stable dérivée de la clé BibTeX; la clé doit exister dans references/references.bib.
 - Les citations bibliographiques sont ajoutées à `references/references.bib`; ne pas réutiliser une clé pour un autre document.
 - Une source consultée sur le Web conserve son URL, sa date de publication lorsqu’elle est connue et sa date de consultation si le contenu peut changer.
 - Distinguer résultats publiés, documentation fournisseur, mesures personnelles, estimations et hypothèses.

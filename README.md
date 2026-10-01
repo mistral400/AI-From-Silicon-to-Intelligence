@@ -6,7 +6,7 @@ Le projet explique comment l’IA moderne est conçue, entraînée, exécutée e
 
 ## État du projet
 
-Le projet est en phase de fondation. L’infrastructure de départ est validée par GitHub Actions : les builds Web strict et PDF passent, et le PDF d’aperçu est conservé comme artefact CI. Deux chapitres des fondations sont rédigés en premier jet.
+Le projet est en phase de fondation. Trois chapitres sont maintenant intégrés au parcours; le troisième est en premier jet. Le build Web strict et le validateur des références/liens réussissent dans l’arbre de travail actuel. La validation visuelle du PDF correspondant reste à faire en CI.
 
 - Avancement détaillé : [PROGRESS.md](PROGRESS.md)
 - Prochaines tâches : [TODO.md](TODO.md)

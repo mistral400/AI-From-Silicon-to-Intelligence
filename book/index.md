@@ -6,6 +6,8 @@ Ce livre suit le chemin de l’électricité et des transistors jusqu’aux mod�
 
 [Parcourir la table des matières](table-of-contents.md)
 
+[Consulter le glossaire](glossary.md)
+
 ## Comment lire le livre
 
 Les chapitres sont indépendants lorsque possible et indiquent les connaissances préalables utiles. Les termes anglais courants sont définis à leur première apparition. Les commandes, calculs et résultats portant sur des logiciels précisent leur version ou leur date de vérification.

@@ -2,3 +2,14 @@
 book/part-01-foundations/electricity-to-bit.md
 book/part-01-foundations/binary-and-integer-encoding.md
 book/part-01-foundations/transistors-logic-sequential.md
+book/part-01-foundations/cpu-gpu-accelerators.md
+book/part-01-foundations/memory-hierarchy.md
+book/part-01-foundations/matrix-computation.md
+book/part-01-foundations/vectors-matrices-tensors.md
+book/part-01-foundations/functions-derivatives-gradients.md
+book/part-01-foundations/probability-entropy-information.md
+book/part-01-foundations/gradient-descent-optimization.md
+book/part-02-neural-networks/perceptron-forward-backpropagation.md
+book/part-03-transformers/attention-qkv.md
+book/part-03-transformers/transformer-architecture.md
+book/glossary.md

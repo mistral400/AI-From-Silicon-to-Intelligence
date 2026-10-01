@@ -27,4 +27,19 @@ nav:
       - De l’électricité au bit: part-01-foundations/electricity-to-bit.md
       - Binaire et entiers: part-01-foundations/binary-and-integer-encoding.md
       - Transistors et circuits logiques: part-01-foundations/transistors-logic-sequential.md
+      - CPU, GPU et accélérateurs: part-01-foundations/cpu-gpu-accelerators.md
+      - Mémoire et bande passante: part-01-foundations/memory-hierarchy.md
+      - Calcul matriciel: part-01-foundations/matrix-computation.md
+  - Mathématiques:
+      - Vecteurs, matrices et tenseurs: part-01-foundations/vectors-matrices-tensors.md
+      - Fonctions, dérivées et gradients: part-01-foundations/functions-derivatives-gradients.md
+      - Probabilités, entropie et information: part-01-foundations/probability-entropy-information.md
+      - Descente de gradient et optimisation: part-01-foundations/gradient-descent-optimization.md
+  - Réseaux neuronaux:
+      - Perceptron et rétropropagation: part-02-neural-networks/perceptron-forward-backpropagation.md
+  - Transformers:
+      - Attention Q/K/V: part-03-transformers/attention-qkv.md
+      - Architecture Transformer: part-03-transformers/transformer-architecture.md
+  - Annexes:
+      - Glossaire: glossary.md
   - Gabarit de chapitre: chapter-template.md

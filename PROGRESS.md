@@ -1,55 +1,73 @@
 # État d’avancement
 
-Dernière mise à jour : 2026-09-30
+Dernière mise à jour : 2026-10-01
 
 ## Statut général
 
-**Phase 0 — infrastructure :** le validateur des citations et liens locaux est ajouté; ses contrôles et le build Web strict réussissent localement. La vérification visuelle du PDF reste ouverte. **Phase 1 — fondations :** deux chapitres précédents sont présents; le chapitre sur les transistors, la logique et les circuits séquentiels est en premier jet.
+**Phase 0 — infrastructure :** le validateur, les tests, le build Web strict, la génération des figures et le build PDF passent localement et dans le run CI `36878094080` sur `work` (commit `e734de2`). Son PDF A4 de 58 pages a été inspecté, comme les versions précédentes de 49 pages. Les chapitres ajoutés ont été lus dans le rendu CI; la vérification des pages sources externes reste ouverte.
 
-## Terminé
+**Phase 1 — fondations :** treize chapitres sont rédigés en premier jet, du signal électrique à l’architecture Transformer. Un glossaire initial couvre maintenant quelques termes d’attention. Les dix chapitres les plus récents ont encore besoin d’une vérification indépendante de leurs sources externes avant de pouvoir être considérés comme relus.
 
-- Dépôt confirmé : mistral400/AI-From-Silicon-to-Intelligence, branche par défaut main.
-- Architecture éditoriale, conventions de contribution, roadmap, suivi de progression, références et politique de figures créés.
-- Build Web MkDocs strict réussi localement sur les changements courants.
-- Validateur des citations, métadonnées bibliographiques essentielles et liens/ancres locaux ajouté au workflow CI.
-- Huit tests unitaires passent : références valides, clé absente, doublon, métadonnées et URL invalides, liens/ancres cassés et exclusion des exemples de code.
-- Notice BibTeX de Transformer complétée à partir des métadonnées officielles NeurIPS : auteurs, volume, pages, année, lieu et URL de l’éditeur.
-- Les trois chapitres de fond figurent dans la table des matières, la navigation Web et le manifeste PDF.
+## Réalisé
 
-## En cours / à valider
+- Dépôt confirmé : `mistral400/AI-From-Silicon-to-Intelligence`; branche de travail `work`, branche par défaut `main`.
+- Treize chapitres de fond sont reliés à la navigation Web, au manifeste PDF et à la table des matières.
+- Chapitre ajouté sur le perceptron, les activations, la propagation avant et la rétropropagation, avec exemples calculés, trois exercices et corrigé.
+- Quatre figures originales, sur les réseaux neuronaux et l’attention/architecture Transformer, sont générées par `scripts/generate_figures.py` avec Matplotlib 3.10.8.
+- Glossaire initial relié à la navigation et inclus après les chapitres dans le PDF.
+- Le PDF utilise maintenant A4, une police de 11 pt, un sommaire limité aux chapitres et des chemins de ressources qui incluent les images du livre.
+- Validateur des citations et liens locaux réussi le 1er octobre 2026.
+- Quatorze tests du validateur et des renvois PDF réussis le 1er octobre 2026.
+- Build Web strict réussi avec MkDocs 1.6.1 et Material 9.7.7. Le build affiche l’avertissement du thème sur les changements annoncés pour MkDocs 2.0, mais termine sans erreur.
+- Comparaison des figures régénérées réussie localement; le code et les PNG suivis sont cohérents dans cet environnement.
+- PDF local réussi : 58 pages A4. La table des matières tient sur une page. La compilation n’a signalé ni ressource image manquante, ni boîte trop large, ni avertissement LaTeX. L’inspection confirme 101 destinations nommées et 24 liens Web; aucun lien vers un fichier Markdown brut ne reste.
+- Toutes les pages du PDF local ont été parcourues en planches contact; les pages imprimées 46–56 ont été inspectées en plus haute résolution. Les quatre figures, les équations d’attention, le tableau de paramètres et le glossaire sont lisibles; aucun débordement visible n’a été relevé.
+- Les calculs des deux exemples du nouveau chapitre ont été recalculés avec Python; l’étape de gradient diminue la perte de 0,18 à environ 0,109 pour le taux choisi de 0,01.
+- Premiers jets ajoutés sur l’attention Q/K/V et l’architecture Transformer, avec un exemple causal calculé, un comptage illustratif de 172 paramètres, deux figures originales et des exercices. Le calcul d’attention donne des poids arrondis à `[0,33; 0,67; 0]` et une sortie `[0,33; 1,34]`.
+- Glossaire étendu avec attention croisée, clés, requêtes, valeurs, masques causaux, encodage de position et Transformer.
 
-- Le code Markdown du chapitre binaire a été corrigé pour les formules en ligne. La dernière exécution GitHub Actions disponible a réussi sur le commit de base 866cfd1; son artefact PDF n’a pas pu être téléchargé sans authentification GitHub. Le rendu visuel des équations en ligne reste donc à vérifier.
-- L’environnement local ne contient pas Pandoc ni XeLaTeX. Le PDF intégrant les nouveaux liens de citations et le troisième chapitre doit être reconstruit et inspecté en CI.
-- Le chapitre « Transistors, portes logiques et circuits séquentiels » est en premier jet. Ses sources et ses ancres de citation sont validées; le build Web passe. La tâche TODO reste ouverte jusqu’à la vérification du PDF.
-- Décider séparément des licences du contenu, du code et des figures.
+## CI et artefacts
+
+- Run `36799442058` sur le commit `bbd6117` de `main` : neuf étapes terminées avec succès, y compris validations, tests, build Web, PDF et upload.
+- Artefact CI de ce run téléchargé et inspecté : PDF de 11 pages, couvrant les chapitres présents sur `main` à ce commit. Il ne comprend pas les nouveaux chapitres de `work`.
+- Run `36875895430` sur le commit `94c6dcd` de `work` via la PR brouillon #1 : toutes les étapes ont réussi, dont vérification des figures, citations/liens, 14 tests, build Web strict, build PDF et upload.
+- Artefact `ai-from-silicon-to-intelligence-pdf-preview` téléchargé depuis le run `36875895430` : PDF A4 de 49 pages. Les planches contact couvrent l’ensemble du livre; les pages imprimées 43–47 du chapitre neuronal et du glossaire ont été inspectées en haute résolution.
+- Artefact du run `36878094080` sur `e734de2` téléchargé : PDF A4 de 58 pages. Toutes les pages ont été parcourues en planches contact; les pages imprimées 46–56 des chapitres sur l’attention, l’architecture Transformer et le glossaire ont été inspectées en haute résolution. Pas de clipping visible; figures, tableaux, équations et liens sont lisibles.
+
+## Sources, licences et thèmes
+
+- Les URLs de sources ajoutées pour l’architecture, les mathématiques et les réseaux neuronaux n’ont pas été ouvertes pendant cette session. Les requêtes vers Nature, l’API arXiv et l’API Crossref ont toutes échoué au tunnel réseau avec HTTP 403; les sources et leurs métadonnées doivent être revalidées depuis un accès autorisé.
+- Le nouveau contenu cite également Vaswani et al. (2017); ni l’article ni sa fiche arXiv n’ont pu être consultés depuis cet environnement.
+- Le validateur confirme les clés BibTeX, les champs requis et les liens locaux; il ne vérifie ni l’existence des pages externes, ni le soutien d’une affirmation par sa source.
+- Le dépôt conserve la licence MIT préexistante. La portée du texte et des figures reste à confirmer par le responsable du dépôt; aucune licence n’a été étendue ou remplacée.
+- Material reste le thème de prototype. Le build local affiche un avertissement à propos de MkDocs 2.0; la date de fin de maintenance inscrite précédemment dans le dépôt n’a pas été confirmée sur le Web durant cette session. La stratégie de migration est documentée dans `DECISIONS.md`.
 
 ## Chapitres
 
-| Chapitre | Statut | Dernière vérification |
-|---|---|---|
-| De l’électricité au bit : niveaux logiques et abstraction numérique | Premier jet; source MIT vérifiée; build Web strict réussi; équations en bloc vérifiées dans l’ancien PDF CI | 2026-09-28 |
-| Binaire, hexadécimal et nombres entiers | Premier jet; source MIT vérifiée; délimiteurs de maths en ligne corrigés; rendu PDF à vérifier | 2026-09-30 |
-| Transistors, portes logiques et circuits séquentiels | Premier jet; sources MIT OCW vérifiées; citations/liens validés; build Web strict réussi; PDF à reconstruire et relire | 2026-09-30 |
+| Chapitre | État actuel |
+|---|---|
+| De l’électricité au bit | Premier jet; source MIT déjà vérifiée dans une session antérieure; équations en bloc inspectées |
+| Binaire, hexadécimal et entiers | Premier jet; source MIT déjà vérifiée dans une session antérieure; formules inspectées |
+| Transistors, portes et circuits séquentiels | Premier jet; sources MIT déjà vérifiées dans une session antérieure; PDF local inspecté |
+| CPU, GPU et accélérateurs | Premier jet; liens locaux et builds vérifiés; pages de sources externes à revalider |
+| Mémoire, bande passante et latence | Premier jet; liens locaux et builds vérifiés; pages de sources externes à revalider |
+| Calcul matriciel et précision numérique | Premier jet; équations et PDF local inspectés; sources à revalider |
+| Vecteurs, matrices et tenseurs | Premier jet; liens locaux et builds vérifiés; sources à revalider |
+| Fonctions, dérivées et gradients | Premier jet; équations inspectées; sources à revalider |
+| Probabilités, entropie et information | Premier jet; équations inspectées; sources à revalider |
+| Optimisation et descente de gradient | Premier jet; liens locaux et builds vérifiés; sources à revalider |
+| Perceptron, propagation avant et rétropropagation | Premier jet; exemples numériques recalculés; références externes à vérifier |
+| Attention : requêtes, clés et valeurs | Premier jet; exemple recalculé, figure et rendu PDF local inspectés; source externe et CI du nouvel état à vérifier |
+| Architecture Transformer | Premier jet; comptage de paramètres vérifié, figure et rendu PDF local inspectés; source externe et CI du nouvel état à vérifier |
 
-La validation automatisée détecte les erreurs structurées, mais ne remplace pas une relecture éditoriale indépendante.
+La validation actuelle garantit la structure et le rendu; elle ne remplace pas une relecture pédagogique et bibliographique.
 
-## Références et figures
+## Problèmes connus et prochaine étape
 
-- Références BibTeX MIT OpenCourseWare 6.004 : encodages et niveaux logiques, CMOS, logique combinatoire et logique séquentielle.
-- *Attention Is All You Need* est conservé pour la future partie Transformers.
-- Aucune figure originale n’a encore été produite; les chapitres actuels utilisent des tableaux et des calculs textuels.
+- Les nouvelles références externes restent à ouvrir et à contrôler une par une.
+- Les pages et métadonnées de sources externes restent à revalider depuis un accès Web autorisé.
+- Le glossaire ne couvre que les termes déjà présentés; aucun index conceptuel n’existe encore.
+- Le statut des licences du texte et des figures reste à confirmer.
+- Il faut encore rédiger les fondations des Transformers, puis les chapitres d’ingénierie des LLM, d’IA locale, d’entraînement, d’infrastructure et de systèmes modernes décrits dans `ROADMAP.md`.
 
-## Problèmes connus
-
-- Le PDF de la version de travail n’a pas été compilé localement; la CI doit le reconstruire. L’inspection visuelle de l’artefact précédent requiert un accès GitHub authentifié.
-- La licence MIT actuelle ne précise pas le statut des textes et des figures. Les droits et le choix des licences restent à clarifier avant publication.
-- Material for MkDocs annonce sa fin de maintenance le 5 novembre 2026; choisir un moteur/thème Web à long terme avant publication publique.
-- L’hébergement public du site et le format final du livre PDF restent à décider.
-
-## Dernière étape terminée
-
-Le validateur de références/liens, ses huit tests unitaires et le build Web strict passent sur l’arbre de travail courant. L’artefact PDF correspondant reste à valider en CI.
-
-## Prochaine étape
-
-Faire exécuter le workflow CI sur ces changements, télécharger son PDF et vérifier le rendu mathématique et les liens de citations. Ensuite continuer vers le chapitre CPU, GPU, accélérateurs et mémoire.
+**Prochaine étape immédiate :** poursuivre le contrôle bibliographique des chapitres de fondation lorsqu’un accès aux sources est disponible; continuer ensuite avec tokenisation, vocabulaire et embeddings.

@@ -113,7 +113,7 @@ Prenons \(t_{\mathrm{CQ}}=1\ \text{ns}\), \(t_{\mathrm{logic,max}}=4\ \text{ns}\
 
 Le transistor permet de fabriquer des portes; les portes réalisent des opérations booléennes; les circuits séquentiels gardent les bits entre les opérations. Un processeur combine ainsi des registres, une ALU, des chemins de données et du contrôle. Un GPU répète et parallélise une partie de ces opérations. Dans un accélérateur d’IA, des réseaux de portes et de mémoires font exécuter des opérations sur des vecteurs et des matrices, tandis que les registres et les mémoires gardent les opérandes et les résultats disponibles.
 
-Cette chaîne matérielle est le premier lien entre le silicium et l’apprentissage automatique. La suite expliquera comment les architectures CPU, GPU et accélératrices exécutent les calculs matriciels, et pourquoi le déplacement des données entre mémoires devient aussi déterminant que les portes qui calculent.
+Cette chaîne matérielle est le premier lien entre le silicium et l’apprentissage automatique. Le chapitre sur les [CPU, GPU et accélérateurs](cpu-gpu-accelerators.md) présente leurs compromis; ceux sur la [mémoire](memory-hierarchy.md) et le [calcul matriciel](matrix-computation.md) expliquent le mouvement des données et les opérations qui dominent de nombreux modèles.
 
 ## Limites et pièges
 

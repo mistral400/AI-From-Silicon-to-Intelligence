@@ -1,55 +1,63 @@
 # État d’avancement
 
-Dernière mise à jour : 2026-09-30
+Dernière mise à jour : 2026-10-01
 
 ## Statut général
 
-**Phase 0 — infrastructure :** le validateur des citations et liens locaux est ajouté; ses contrôles et le build Web strict réussissent localement. La vérification visuelle du PDF reste ouverte. **Phase 1 — fondations :** deux chapitres précédents sont présents; le chapitre sur les transistors, la logique et les circuits séquentiels est en premier jet.
+**Phase 0 — infrastructure :** le validateur de références/liens et le build Web strict passent localement. Le PDF complet de 26 pages a été compilé avec Pandoc et XeLaTeX; les équations de plusieurs chapitres ont été inspectées visuellement. Il reste à vérifier l’artefact PDF de CI. **Phase 1 — fondations :** trois chapitres initiaux sont présents; six nouveaux chapitres sont intégrés en premiers jets. Les sources de ces six nouveaux chapitres sont à revalider, car cet environnement ne permet pas d’accéder à leurs sites.
 
 ## Terminé
 
 - Dépôt confirmé : mistral400/AI-From-Silicon-to-Intelligence, branche par défaut main.
 - Architecture éditoriale, conventions de contribution, roadmap, suivi de progression, références et politique de figures créés.
-- Build Web MkDocs strict réussi localement sur les changements courants.
-- Validateur des citations, métadonnées bibliographiques essentielles et liens/ancres locaux ajouté au workflow CI.
-- Huit tests unitaires passent : références valides, clé absente, doublon, métadonnées et URL invalides, liens/ancres cassés et exclusion des exemples de code.
-- Notice BibTeX de Transformer complétée à partir des métadonnées officielles NeurIPS : auteurs, volume, pages, année, lieu et URL de l’éditeur.
-- Les trois chapitres de fond figurent dans la table des matières, la navigation Web et le manifeste PDF.
+- Six chapitres ajoutés sur les processeurs, la mémoire, le calcul matriciel, les vecteurs et tenseurs, les dérivées et la descente de gradient.
+- Les neuf chapitres de fond figurent dans le manifeste PDF; les six nouveaux sont intégrés à la navigation Web et à la table des matières.
+- Validateur des citations, métadonnées bibliographiques et liens locaux réussi le 1er octobre 2026.
+- Build Web strict réussi avec MkDocs 1.6.1 et Material 9.7.7, conformément à requirements-build.txt.
+- Build PDF local réussi sans avertissement de références dupliquées; le script préfixe uniquement les ancres de références dans ses copies temporaires, sans modifier les sources Markdown.
+- Inspection visuelle d’équations en ligne et en bloc : chapitres sur l’électricité, le binaire, les transistors, le calcul matriciel, les dérivées et les gradients.
 
 ## En cours / à valider
 
-- Le code Markdown du chapitre binaire a été corrigé pour les formules en ligne. La dernière exécution GitHub Actions disponible a réussi sur le commit de base 866cfd1; son artefact PDF n’a pas pu être téléchargé sans authentification GitHub. Le rendu visuel des équations en ligne reste donc à vérifier.
-- L’environnement local ne contient pas Pandoc ni XeLaTeX. Le PDF intégrant les nouveaux liens de citations et le troisième chapitre doit être reconstruit et inspecté en CI.
-- Le chapitre « Transistors, portes logiques et circuits séquentiels » est en premier jet. Ses sources et ses ancres de citation sont validées; le build Web passe. La tâche TODO reste ouverte jusqu’à la vérification du PDF.
+- Vérifier dans GitHub Actions l’artefact PDF et confirmer le rendu dans l’environnement CI. Les pages locales examinées sont lisibles.
+- Ouvrir et vérifier les sources externes nouvellement ajoutées pour CPU/GPU/accélérateurs, mémoire, calcul matriciel, algèbre linéaire et optimisation. La politique réseau de l’environnement de rédaction autorise ici les hôtes de paquets, mais pas les sites de documentation ou d’éditeurs utilisés dans ces références; les entrées ne prétendent donc pas avoir été consultées le 1er octobre.
 - Décider séparément des licences du contenu, du code et des figures.
 
 ## Chapitres
 
 | Chapitre | Statut | Dernière vérification |
 |---|---|---|
-| De l’électricité au bit : niveaux logiques et abstraction numérique | Premier jet; source MIT vérifiée; build Web strict réussi; équations en bloc vérifiées dans l’ancien PDF CI | 2026-09-28 |
-| Binaire, hexadécimal et nombres entiers | Premier jet; source MIT vérifiée; délimiteurs de maths en ligne corrigés; rendu PDF à vérifier | 2026-09-30 |
-| Transistors, portes logiques et circuits séquentiels | Premier jet; sources MIT OCW vérifiées; citations/liens validés; build Web strict réussi; PDF à reconstruire et relire | 2026-09-30 |
+| De l’électricité au bit : niveaux logiques et abstraction numérique | Premier jet; source MIT vérifiée; build Web strict réussi; équations en bloc inspectées | 2026-10-01 |
+| Binaire, hexadécimal et nombres entiers | Premier jet; source MIT vérifiée; build Web strict réussi; équations en ligne et en bloc inspectées | 2026-10-01 |
+| Transistors, portes logiques et circuits séquentiels | Premier jet; sources MIT OCW vérifiées; citations/liens et builds Web/PDF validés; pages du chapitre inspectées | 2026-10-01 |
+| CPU, GPU et accélérateurs | Premier jet; citations/liens et builds Web/PDF validés; sources à revalider | 2026-10-01 |
+| Mémoire, bande passante et latence | Premier jet; citations/liens et builds Web/PDF validés; sources à revalider | 2026-10-01 |
+| Calcul matriciel et précision numérique | Premier jet; citations/liens et builds Web/PDF validés; équations inspectées; sources à revalider | 2026-10-01 |
+| Vecteurs, matrices et tenseurs | Premier jet; citations/liens et builds Web/PDF validés; sources à revalider | 2026-10-01 |
+| Fonctions, dérivées, gradients et règle de chaîne | Premier jet; citations/liens et builds Web/PDF validés; équations inspectées; sources à revalider | 2026-10-01 |
+| Optimisation et descente de gradient | Premier jet; citations/liens et builds Web/PDF validés; sources à revalider | 2026-10-01 |
 
-La validation automatisée détecte les erreurs structurées, mais ne remplace pas une relecture éditoriale indépendante.
+La validation automatisée détecte les erreurs structurées et les liens locaux; elle ne confirme pas qu’une source externe appuie chaque affirmation. La relecture éditoriale reste nécessaire.
 
 ## Références et figures
 
-- Références BibTeX MIT OpenCourseWare 6.004 : encodages et niveaux logiques, CMOS, logique combinatoire et logique séquentielle.
+- Références MIT OpenCourseWare 6.004 conservées pour les chapitres sur les bits, le CMOS, la logique combinatoire et les circuits séquentiels.
+- Nouvelles entrées ajoutées pour l’architecture des processeurs, CUDA, le TPU, la hiérarchie mémoire, le modèle Roofline, l’algèbre linéaire et l’optimisation.
 - *Attention Is All You Need* est conservé pour la future partie Transformers.
 - Aucune figure originale n’a encore été produite; les chapitres actuels utilisent des tableaux et des calculs textuels.
 
 ## Problèmes connus
 
-- Le PDF de la version de travail n’a pas été compilé localement; la CI doit le reconstruire. L’inspection visuelle de l’artefact précédent requiert un accès GitHub authentifié.
+- L’artefact PDF de CI n’a pas été téléchargé ni inspecté. La compilation locale passe, mais elle ne remplace pas cette vérification demandée.
+- Les nouvelles références externes ne sont pas encore réouvertes dans un environnement donnant accès aux pages d’éditeurs et de documentation.
 - La licence MIT actuelle ne précise pas le statut des textes et des figures. Les droits et le choix des licences restent à clarifier avant publication.
 - Material for MkDocs annonce sa fin de maintenance le 5 novembre 2026; choisir un moteur/thème Web à long terme avant publication publique.
 - L’hébergement public du site et le format final du livre PDF restent à décider.
 
 ## Dernière étape terminée
 
-Le validateur de références/liens, ses huit tests unitaires et le build Web strict passent sur l’arbre de travail courant. L’artefact PDF correspondant reste à valider en CI.
+Les neuf chapitres ont été validés par le validateur de références/liens et le build Web strict; le PDF local a été compilé et les équations représentatives inspectées. Les résultats de validation externe et l’artefact PDF de CI restent ouverts.
 
 ## Prochaine étape
 
-Faire exécuter le workflow CI sur ces changements, télécharger son PDF et vérifier le rendu mathématique et les liens de citations. Ensuite continuer vers le chapitre CPU, GPU, accélérateurs et mémoire.
+Revalider les sources des six nouveaux chapitres depuis un accès Web autorisé, puis contrôler l’artefact PDF produit par GitHub Actions.

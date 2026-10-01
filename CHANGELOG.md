@@ -2,6 +2,13 @@
 
 Les changements éditoriaux et techniques importants sont consignés ici. Les entrées de contenu citeront les chapitres concernés; les releases suivront le versionnement sémantique lorsqu’un premier livre publiable existera.
 
+## 2026-10-01 — Premiers jets matériel et mathématiques
+
+- Ajout de chapitres sur CPU/GPU/accélérateurs, hiérarchie mémoire, calcul matriciel, vecteurs/matrices/tenseurs, dérivées et descente de gradient.
+- Ajout des entrées bibliographiques correspondantes et intégration des six chapitres à la navigation et au manifeste PDF.
+- Le validateur des références/liens, le build Web strict et la construction locale du PDF réussissent; les pages d’équations ont été inspectées.
+- La relecture externe des nouvelles sources et la vérification de l’artefact PDF de CI restent ouvertes.
+
 ## 2026-09-28 — Chapitre de fondation 2
 
 - Ajout des conversions binaire, décimale et hexadécimale, des entiers non signés et signés, du complément à deux et du débordement.

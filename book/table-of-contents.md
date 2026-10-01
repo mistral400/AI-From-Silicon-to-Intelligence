@@ -7,16 +7,16 @@ Cette structure initiale organise les sujets du cahier des charges par dépendan
 1. [De l’électricité au bit : niveaux logiques et abstraction numérique](part-01-foundations/electricity-to-bit.md)
 2. [Binaire, hexadécimal et nombres entiers](part-01-foundations/binary-and-integer-encoding.md)
 3. [Transistors, portes logiques et circuits séquentiels](part-01-foundations/transistors-logic-sequential.md)
-4. CPU, GPU, accélérateurs et calcul parallèle
-5. Mémoire, stockage, bande passante et latence
-6. Calcul matriciel et précision numérique
+4. [CPU, GPU, accélérateurs et calcul parallèle](part-01-foundations/cpu-gpu-accelerators.md)
+5. [Mémoire, stockage, bande passante et latence](part-01-foundations/memory-hierarchy.md)
+6. [Calcul matriciel et précision numérique](part-01-foundations/matrix-computation.md)
 
 ## Partie II — Mathématiques pour l’apprentissage automatique
 
-7. Vecteurs, matrices et tenseurs
-8. Fonctions, dérivées, gradients et règle de chaîne
+7. [Vecteurs, matrices et tenseurs](part-01-foundations/vectors-matrices-tensors.md)
+8. [Fonctions, dérivées, gradients et règle de chaîne](part-01-foundations/functions-derivatives-gradients.md)
 9. Probabilités, distributions et entropie
-10. Optimisation, descente de gradient et régularisation
+10. [Optimisation, descente de gradient et régularisation](part-01-foundations/gradient-descent-optimization.md)
 11. Théorie de l’information et pertes
 
 ## Partie III — Réseaux neuronaux

@@ -6,7 +6,7 @@ Le projet explique comment l’IA moderne est conçue, entraînée, exécutée e
 
 ## État du projet
 
-Le projet est en phase de fondation. Treize chapitres figurent maintenant dans le parcours; les dix derniers sont des premiers jets. Quatre figures originales sur les réseaux neuronaux et les Transformers sont générées par un script du dépôt. Le PDF de 49 pages du commit `94c6dcd` a été construit par la CI et inspecté; la nouvelle version locale de 58 pages passe les vérifications. Les sources externes ajoutées restent à vérifier.
+Le projet est en phase de fondation. Treize chapitres figurent maintenant dans le parcours; les dix derniers sont des premiers jets. Quatre figures originales sur les réseaux neuronaux et les Transformers sont générées par un script du dépôt. Le PDF A4 de 58 pages du commit `e734de2` a été construit et inspecté dans la CI. Les sources externes ajoutées restent à vérifier.
 
 - Avancement détaillé : [PROGRESS.md](PROGRESS.md)
 - Prochaines tâches : [TODO.md](TODO.md)

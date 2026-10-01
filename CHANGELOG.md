@@ -14,7 +14,7 @@ Les changements éditoriaux et techniques importants sont consignés ici. Les en
 
 - Ajout de premiers jets sur l’attention à produit scalaire, les masques, les têtes multiples, l’encodeur-décodeur et le décodeur causal.
 - Ajout de deux figures originales reproductibles, de calculs à la main, d’exercices et de termes au glossaire.
-- Intégration Web/PDF, quatorze tests, validation des références/liens, vérification des quatre figures et build PDF local de 58 pages réussis. Le run CI du nouvel état et les pages de sources externes restent à vérifier.
+- Intégration Web/PDF, quatorze tests, validation des références/liens, vérification des quatre figures et build PDF local de 58 pages réussis. Le run CI `36878094080` a aussi réussi; son artefact de 58 pages a été parcouru en planches contact et inspecté en détail dans les chapitres ajoutés. Les pages de sources externes restent à vérifier.
 
 ## 2026-10-01 — Probabilités, entropie et information
 

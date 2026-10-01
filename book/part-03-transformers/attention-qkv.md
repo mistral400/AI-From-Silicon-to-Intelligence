@@ -1,6 +1,6 @@
 # Attention : requêtes, clés et valeurs
 
-> **Statut :** premier jet; source externe à vérifier et rendu PDF de CI à inspecter.\
+> **Statut :** premier jet; source externe à vérifier; PDF de CI inspecté le 2026-10-01.\
 > **Date de rédaction :** 2026-10-01\
 > **Prérequis :** vecteurs, matrices, produits scalaires et probabilités
 

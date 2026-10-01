@@ -1,6 +1,6 @@
 # Réseaux neuronaux : perceptron, propagation avant et rétropropagation
 
-> **Statut :** premier jet; sources externes à vérifier et rendu PDF de CI à inspecter.\
+> **Statut :** premier jet; sources externes à vérifier; PDF de CI inspecté le 2026-10-01.\
 > **Date de rédaction :** 2026-10-01\
 > **Prérequis :** vecteurs, matrices, dérivées et descente de gradient
 

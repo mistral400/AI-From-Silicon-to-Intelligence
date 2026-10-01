@@ -4,7 +4,7 @@ Dernière mise à jour : 2026-10-01
 
 ## Statut général
 
-**Phase 0 — infrastructure :** le validateur, les tests, le build Web strict, la génération des figures et le build PDF passent localement. Le run CI `36875895430` sur `work` (commit `94c6dcd`) a terminé avec succès et a produit un PDF A4 de 49 pages. Toutes ses pages ont été parcourues en planches contact; le chapitre neuronal et le glossaire ont aussi été inspectés en détail. Le nouvel état Transformer passe les validations locales; il doit encore déclencher son propre run CI.
+**Phase 0 — infrastructure :** le validateur, les tests, le build Web strict, la génération des figures et le build PDF passent localement et dans le run CI `36878094080` sur `work` (commit `e734de2`). Son PDF A4 de 58 pages a été inspecté, comme les versions précédentes de 49 pages. Les chapitres ajoutés ont été lus dans le rendu CI; la vérification des pages sources externes reste ouverte.
 
 **Phase 1 — fondations :** treize chapitres sont rédigés en premier jet, du signal électrique à l’architecture Transformer. Un glossaire initial couvre maintenant quelques termes d’attention. Les dix chapitres les plus récents ont encore besoin d’une vérification indépendante de leurs sources externes avant de pouvoir être considérés comme relus.
 
@@ -31,8 +31,8 @@ Dernière mise à jour : 2026-10-01
 - Run `36799442058` sur le commit `bbd6117` de `main` : neuf étapes terminées avec succès, y compris validations, tests, build Web, PDF et upload.
 - Artefact CI de ce run téléchargé et inspecté : PDF de 11 pages, couvrant les chapitres présents sur `main` à ce commit. Il ne comprend pas les nouveaux chapitres de `work`.
 - Run `36875895430` sur le commit `94c6dcd` de `work` via la PR brouillon #1 : toutes les étapes ont réussi, dont vérification des figures, citations/liens, 14 tests, build Web strict, build PDF et upload.
-- Artefact `ai-from-silicon-to-intelligence-pdf-preview` téléchargé : PDF A4 de 49 pages. Les planches contact couvrent l’ensemble du livre; les pages imprimées 43–47 du chapitre neuronal et du glossaire ont été inspectées en haute résolution. Pas de clipping visible; les images, tableaux, équations et liens sont lisibles.
-- Les chapitres Transformer ont été ajoutés après ce run; le PDF local correspondant comporte 58 pages et a été inspecté. Le PDF CI du prochain commit reste à produire et inspecter.
+- Artefact `ai-from-silicon-to-intelligence-pdf-preview` téléchargé depuis le run `36875895430` : PDF A4 de 49 pages. Les planches contact couvrent l’ensemble du livre; les pages imprimées 43–47 du chapitre neuronal et du glossaire ont été inspectées en haute résolution.
+- Artefact du run `36878094080` sur `e734de2` téléchargé : PDF A4 de 58 pages. Toutes les pages ont été parcourues en planches contact; les pages imprimées 46–56 des chapitres sur l’attention, l’architecture Transformer et le glossaire ont été inspectées en haute résolution. Pas de clipping visible; figures, tableaux, équations et liens sont lisibles.
 
 ## Sources, licences et thèmes
 
@@ -65,9 +65,9 @@ La validation actuelle garantit la structure et le rendu; elle ne remplace pas u
 ## Problèmes connus et prochaine étape
 
 - Les nouvelles références externes restent à ouvrir et à contrôler une par une.
-- Le prochain run CI doit valider le contenu Transformer ajouté après le commit `94c6dcd`.
+- Les pages et métadonnées de sources externes restent à revalider depuis un accès Web autorisé.
 - Le glossaire ne couvre que les termes déjà présentés; aucun index conceptuel n’existe encore.
 - Le statut des licences du texte et des figures reste à confirmer.
 - Il faut encore rédiger les fondations des Transformers, puis les chapitres d’ingénierie des LLM, d’IA locale, d’entraînement, d’infrastructure et de systèmes modernes décrits dans `ROADMAP.md`.
 
-**Prochaine étape immédiate :** pousser le contenu Transformer validé localement sur `work`, puis télécharger et inspecter l’artefact du prochain run CI. Ensuite, revalider les sources externes depuis un accès autorisé et poursuivre les sujets de fondation encore prévus.
+**Prochaine étape immédiate :** poursuivre le contrôle bibliographique des chapitres de fondation lorsqu’un accès aux sources est disponible; continuer ensuite avec tokenisation, vocabulaire et embeddings.

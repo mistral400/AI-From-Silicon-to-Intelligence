@@ -1,6 +1,6 @@
 # Architecture Transformer, encodeur, décodeur et variantes
 
-> **Statut :** premier jet; source externe à vérifier et rendu PDF de CI à inspecter.\
+> **Statut :** premier jet; source externe à vérifier; PDF de CI inspecté le 2026-10-01.\
 > **Date de rédaction :** 2026-10-01\
 > **Prérequis :** [attention Q/K/V](attention-qkv.md), vecteurs et rétropropagation
 

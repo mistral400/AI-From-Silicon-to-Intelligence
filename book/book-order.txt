@@ -9,3 +9,5 @@ book/part-01-foundations/vectors-matrices-tensors.md
 book/part-01-foundations/functions-derivatives-gradients.md
 book/part-01-foundations/probability-entropy-information.md
 book/part-01-foundations/gradient-descent-optimization.md
+book/part-02-neural-networks/perceptron-forward-backpropagation.md
+book/glossary.md

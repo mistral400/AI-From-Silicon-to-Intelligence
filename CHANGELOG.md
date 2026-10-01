@@ -2,6 +2,12 @@
 
 Les changements éditoriaux et techniques importants sont consignés ici. Les entrées de contenu citeront les chapitres concernés; les releases suivront le versionnement sémantique lorsqu’un premier livre publiable existera.
 
+## 2026-10-01 — Probabilités, entropie et information
+
+- Ajout d’un premier jet sur les probabilités conditionnelles, Bayes, surprise, entropie, information mutuelle et entropie croisée.
+- Ajout d’une référence à l’article de Shannon et intégration au parcours Web et PDF.
+- Le validateur, le build Web strict et le PDF local réussissent; les pages d’équations ont été inspectées. La relecture des sources externes et le contrôle du PDF de CI restent ouverts.
+
 ## 2026-10-01 — Premiers jets matériel et mathématiques
 
 - Ajout de chapitres sur CPU/GPU/accélérateurs, hiérarchie mémoire, calcul matriciel, vecteurs/matrices/tenseurs, dérivées et descente de gradient.

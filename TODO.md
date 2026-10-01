@@ -20,7 +20,7 @@ Les tâches sont ordonnées selon leurs dépendances. Les statuts sont mis à jo
 - [x] Transistors, portes logiques et circuits séquentiels. Sources vérifiées; citations/liens et build Web validés; PDF local reconstruit et pages du chapitre inspectées. La vérification du PDF de CI reste suivie en phase 0.
 - [ ] CPU, GPU, accélérateurs, mémoire et calcul matriciel. [Trois premiers jets ajoutés](book/part-01-foundations/cpu-gpu-accelerators.md) ([mémoire](book/part-01-foundations/memory-hierarchy.md), [calcul matriciel](book/part-01-foundations/matrix-computation.md)); validateur, build Web strict et PDF local réussis. Relecture des sources à faire depuis un environnement qui peut accéder aux références; artefact PDF CI à contrôler.
 - [ ] Vecteurs, matrices, fonctions, dérivées et descente de gradient. [Trois premiers jets ajoutés](book/part-01-foundations/vectors-matrices-tensors.md) ([fonctions et dérivées](book/part-01-foundations/functions-derivatives-gradients.md), [optimisation](book/part-01-foundations/gradient-descent-optimization.md)); validateur, build Web strict et PDF local réussis. Relecture des sources à faire depuis un environnement qui peut accéder aux références; artefact PDF CI à contrôler.
-- [ ] Probabilités, entropie et information.
+- [ ] Probabilités, entropie et information. Premier jet ajouté dans [probability-entropy-information.md](book/part-01-foundations/probability-entropy-information.md); validateur, build Web strict et PDF local réussis. Relecture des sources et vérification de l’artefact PDF de CI restent à faire.
 - [ ] Perceptrons, couches, activations et rétropropagation.
 - [ ] Attention et architecture Transformer, avec calculs et figures originales.
 

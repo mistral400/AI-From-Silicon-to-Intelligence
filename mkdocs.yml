@@ -33,5 +33,6 @@ nav:
   - Mathématiques:
       - Vecteurs, matrices et tenseurs: part-01-foundations/vectors-matrices-tensors.md
       - Fonctions, dérivées et gradients: part-01-foundations/functions-derivatives-gradients.md
+      - Probabilités, entropie et information: part-01-foundations/probability-entropy-information.md
       - Descente de gradient et optimisation: part-01-foundations/gradient-descent-optimization.md
   - Gabarit de chapitre: chapter-template.md

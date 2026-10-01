@@ -1,6 +1,7 @@
 # Calcul matriciel et précision numérique
 
-> **Statut :** premier jet; sources et rendu PDF à valider. **Date de rédaction :** 2026-10-01
+> **Statut :** premier jet; sources et rendu PDF à valider.\
+> **Date de rédaction :** 2026-10-01\
 > **Prérequis :** savoir lire les dimensions d’une matrice; voir aussi le chapitre sur la mémoire
 
 ## Objectifs

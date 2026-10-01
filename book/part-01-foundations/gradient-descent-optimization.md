@@ -1,6 +1,7 @@
 # Optimisation et descente de gradient
 
-> **Statut :** premier jet; sources et rendu PDF à valider. **Date de rédaction :** 2026-10-01
+> **Statut :** premier jet; sources et rendu PDF à valider.\
+> **Date de rédaction :** 2026-10-01\
 > **Prérequis :** fonctions, dérivées, gradients et règle de chaîne
 
 ## Objectifs

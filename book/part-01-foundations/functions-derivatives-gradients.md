@@ -1,6 +1,7 @@
 # Fonctions, dérivées, gradients et règle de chaîne
 
-> **Statut :** premier jet; sources et rendu PDF à valider. **Date de rédaction :** 2026-10-01
+> **Statut :** premier jet; sources et rendu PDF à valider.\
+> **Date de rédaction :** 2026-10-01\
 > **Prérequis :** opérations sur les nombres, vecteurs et matrices
 
 ## Objectifs

@@ -1,6 +1,7 @@
 # Mémoire, bande passante et latence
 
-> **Statut :** premier jet; sources et rendu PDF à valider. **Date de rédaction :** 2026-10-01
+> **Statut :** premier jet; sources et rendu PDF à valider.\
+> **Date de rédaction :** 2026-10-01\
 > **Prérequis :** connaître les registres et avoir lu le chapitre sur les processeurs
 
 ## Objectifs

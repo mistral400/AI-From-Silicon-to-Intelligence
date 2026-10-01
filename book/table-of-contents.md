@@ -15,7 +15,7 @@ Cette structure initiale organise les sujets du cahier des charges par dépendan
 
 7. [Vecteurs, matrices et tenseurs](part-01-foundations/vectors-matrices-tensors.md)
 8. [Fonctions, dérivées, gradients et règle de chaîne](part-01-foundations/functions-derivatives-gradients.md)
-9. Probabilités, distributions et entropie
+9. [Probabilités, entropie et information](part-01-foundations/probability-entropy-information.md)
 10. [Optimisation, descente de gradient et régularisation](part-01-foundations/gradient-descent-optimization.md)
 11. Théorie de l’information et pertes
 

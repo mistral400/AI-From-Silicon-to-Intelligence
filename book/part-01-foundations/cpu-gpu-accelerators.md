@@ -1,6 +1,7 @@
 # CPU, GPU et accélérateurs
 
-> **Statut :** premier jet; sources et rendu PDF à valider. **Date de rédaction :** 2026-10-01
+> **Statut :** premier jet; sources et rendu PDF à valider.\
+> **Date de rédaction :** 2026-10-01\
 > **Prérequis :** bits, portes logiques, registres et circuits séquentiels
 
 ## Objectifs

@@ -2,7 +2,12 @@
 
 ## Identifiants
 
-Nommer les figures `fig-<partie>-<sujet>-<numéro>`, par exemple `fig-05-attention-qkv-01.svg`. Conserver les sources éditables dans `figures/`; les chapitres peuvent les intégrer par chemin relatif.
+Nommer les figures `fig-<partie>-<sujet>-<numéro>`, par exemple `fig-05-attention-qkv-01.svg`. Les ressources Web/PDF communes résident dans `book/figures/`; conserver leur source éditable ou leur script dans `figures/` ou `scripts/`.
+
+## Figures originales
+
+- `book/figures/fig-03-mlp-01.png` et `book/figures/fig-03-activations-01.png` sont générées par `scripts/generate_figures.py` avec Matplotlib 3.10.8. Reproduction : `python scripts/generate_figures.py`. La CI vérifie que les images suivies correspondent au script avec `python scripts/generate_figures.py --check`.
+- Ces figures sont des schémas et courbes mathématiques créés pour ce dépôt; elles n’utilisent pas de données ou d’illustrations tierces.
 
 ## Fiche de traçabilité
 

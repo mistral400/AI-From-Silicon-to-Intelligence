@@ -3,16 +3,19 @@
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import shutil
 import subprocess
 import tempfile
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "book" / "book-order.txt"
 REFERENCE_ID = re.compile(r"(?<=\{#)ref-([A-Za-z0-9_:.+/-]+)(?=\})")
 REFERENCE_LINK = re.compile(r"(?<=\]\(#)ref-([A-Za-z0-9_:.+/-]+)(?=\))")
+MARKDOWN_LINK = re.compile(r"(?P<prefix>!?\[[^\]]*\]\(\s*)(?P<destination><[^>]*>|[^)\s]+)")
 
 
 def read_sources() -> list[Path]:
@@ -41,33 +44,66 @@ def read_sources() -> list[Path]:
     return sources
 
 
-def stage_pdf_sources(sources: list[Path]) -> list[Path]:
-    """Create temporary source copies with reference anchors unique across the PDF."""
+def add_chapter_anchor(markdown: str, chapter_anchor: str) -> str:
+    """Give the chapter heading a stable target for links in the combined PDF."""
+    lines = markdown.splitlines(keepends=True)
+    for index, line in enumerate(lines):
+        if re.match(r"^#\s+", line):
+            ending = "\n" if line.endswith("\n") else ""
+            lines[index] = f"{line.rstrip()} {{#{chapter_anchor}}}{ending}"
+            return "".join(lines)
+    raise ValueError(f"Markdown source has no level-one chapter heading: {chapter_anchor}")
+
+
+def rewrite_pdf_links(markdown: str, source: Path, chapter_anchors: dict[Path, str]) -> str:
+    """Turn local Markdown chapter links into links within the combined PDF."""
+
+    def replace(match: re.Match[str]) -> str:
+        if match.group("prefix").startswith("!"):
+            return match.group(0)
+        destination = match.group("destination")
+        wrapped = destination.startswith("<") and destination.endswith(">")
+        raw_destination = destination[1:-1] if wrapped else destination
+        parsed = urlsplit(raw_destination)
+        if parsed.scheme or parsed.netloc or not parsed.path.lower().endswith(".md"):
+            return match.group(0)
+        raw_path = unquote(parsed.path)
+        target = (ROOT / raw_path.lstrip("/\\")).resolve() if parsed.path.startswith("/") else (source.parent / raw_path).resolve()
+        if target not in chapter_anchors:
+            raise ValueError(f"PDF link target is not in the chapter manifest: {raw_destination!r}")
+        anchor = chapter_anchors[target]
+        if parsed.fragment:
+            fragment = unquote(parsed.fragment)
+            if not fragment.startswith("ref-"):
+                raise ValueError(f"PDF cross-chapter link has an unsupported fragment: {raw_destination!r}")
+            anchor = f"{anchor}-{fragment}"
+        return f"{match.group('prefix')}#{anchor}"
+
+    return MARKDOWN_LINK.sub(replace, markdown)
+
+
+def stage_pdf_sources(sources: list[Path], staging_directory: Path) -> list[Path]:
+    """Create temporary copies with unique anchors and PDF-local chapter links."""
     staged: list[Path] = []
-    try:
-        for index, source in enumerate(sources, start=1):
-            chapter_prefix = f"chapter-{index:02d}-{source.stem}"
-            markdown = source.read_text(encoding="utf-8")
-            markdown = REFERENCE_ID.sub(
-                lambda match: f"{chapter_prefix}-ref-{match.group(1)}", markdown
-            )
-            markdown = REFERENCE_LINK.sub(
-                lambda match: f"{chapter_prefix}-ref-{match.group(1)}", markdown
-            )
-            with tempfile.NamedTemporaryFile(
-                mode="w",
-                encoding="utf-8",
-                suffix=source.suffix,
-                prefix=f".{source.stem}-pdf-",
-                dir=source.parent,
-                delete=False,
-            ) as temporary:
-                temporary.write(markdown)
-                staged.append(Path(temporary.name))
-    except Exception:
-        for path in staged:
-            path.unlink(missing_ok=True)
-        raise
+    staging_directory.mkdir(parents=True, exist_ok=True)
+    chapter_anchors = {
+        source.resolve(): f"chapter-{index:02d}-{source.stem}"
+        for index, source in enumerate(sources, start=1)
+    }
+    for source in sources:
+        markdown = source.read_text(encoding="utf-8")
+        chapter_prefix = chapter_anchors[source.resolve()]
+        markdown = add_chapter_anchor(markdown, chapter_prefix)
+        markdown = rewrite_pdf_links(markdown, source, chapter_anchors)
+        markdown = REFERENCE_ID.sub(
+            lambda match: f"{chapter_prefix}-ref-{match.group(1)}", markdown
+        )
+        markdown = REFERENCE_LINK.sub(
+            lambda match: f"{chapter_prefix}-ref-{match.group(1)}", markdown
+        )
+        staged_path = staging_directory / f"{chapter_prefix}.md"
+        staged_path.write_text(markdown, encoding="utf-8")
+        staged.append(staged_path)
     return staged
 
 
@@ -85,30 +121,40 @@ def main() -> int:
             parser.error(f"Required executable not found: {executable}")
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    pdf_sources = stage_pdf_sources(sources)
-    command = [
-        "pandoc",
-        *map(str, pdf_sources),
-        "--from=markdown+tex_math_single_backslash",
-        "--pdf-engine=xelatex",
-        "--citeproc",
-        f"--bibliography={ROOT / 'references' / 'references.bib'}",
-        "--toc",
-        "--toc-depth=2",
-        "--number-sections",
-        "-V", "title=AI From Silicon to Intelligence",
-        "-V", "subtitle=Une encyclopédie technique de l’intelligence artificielle moderne",
-        "-V", "lang=fr-FR",
-        "-V", "mainfont=Latin Modern Roman",
-        "-V", "geometry:margin=25mm",
-        "-V", "toc-title=Table des matières",
-        "-o", str(args.output),
-    ]
-    try:
+    with tempfile.TemporaryDirectory(prefix="ai-silicon-pdf-") as temporary_directory:
+        pdf_sources = stage_pdf_sources(sources, Path(temporary_directory))
+        command = [
+            "pandoc",
+            *map(str, pdf_sources),
+            f"--resource-path={os.pathsep.join([str(ROOT), *(str(source.parent) for source in sources)])}",
+            "--from=markdown+tex_math_single_backslash",
+            "--pdf-engine=xelatex",
+            "--citeproc",
+            f"--bibliography={ROOT / 'references' / 'references.bib'}",
+            "--toc",
+            "--toc-depth=1",
+            "--number-sections",
+            "--top-level-division=chapter",
+            "-V", "documentclass=book",
+            "-V", "classoption=openany",
+            "-V", "title=AI From Silicon to Intelligence",
+            "-V", "subtitle=Une encyclopédie technique de l’intelligence artificielle moderne",
+            "-V", "lang=fr-FR",
+            "-V", "papersize=a4",
+            "-V", "fontsize=11pt",
+            "-V", "mainfont=Latin Modern Roman",
+            "-V", "monofont=Latin Modern Mono",
+            "-V", "geometry:margin=24mm",
+            "-V", "linestretch=1.08",
+            "-V", "pagestyle=plain",
+            "-V", "colorlinks=true",
+            "-V", "linkcolor=blue",
+            "-V", "urlcolor=blue",
+            "-V", "citecolor=blue",
+            "-V", "toc-title=Table des matières",
+            "-o", str(args.output),
+        ]
         subprocess.run(command, cwd=ROOT, check=True)
-    finally:
-        for path in pdf_sources:
-            path.unlink(missing_ok=True)
     print(f"PDF preview written to {args.output}")
     return 0
 

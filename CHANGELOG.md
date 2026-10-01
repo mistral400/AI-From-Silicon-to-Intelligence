@@ -2,6 +2,14 @@
 
 Les changements éditoriaux et techniques importants sont consignés ici. Les entrées de contenu citeront les chapitres concernés; les releases suivront le versionnement sémantique lorsqu’un premier livre publiable existera.
 
+## 2026-10-01 — Réseaux neuronaux et mise en page du livre
+
+- Ajout d’un chapitre de premier jet sur les perceptrons, les fonctions d’activation, la propagation avant et la rétropropagation, avec exemples numériques, exercices et corrigé.
+- Ajout d’un schéma de réseau multicouche et d’un graphique d’activations générés par un script reproductible; création du glossaire initial.
+- Réorganisation de la table des matières pour éviter de planifier séparément la théorie de l’information déjà couverte et les sous-sujets réunis dans le nouveau chapitre.
+- Passage du PDF en A4, 11 pt, avec un sommaire d’une page, des liens colorés et la résolution des images partagées Web/PDF.
+- Validateur de références/liens, quatorze tests, build Web strict, vérification locale des figures et build PDF de 49 pages réussis. Le run CI de la branche `work` et la revalidation des sources externes restent ouverts.
+
 ## 2026-10-01 — Probabilités, entropie et information
 
 - Ajout d’un premier jet sur les probabilités conditionnelles, Bayes, surprise, entropie, information mutuelle et entropie croisée.

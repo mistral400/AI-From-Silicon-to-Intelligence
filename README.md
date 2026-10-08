@@ -13,6 +13,7 @@ Le projet est en phase de fondation. Trois chapitres sont maintenant intégrés 
 - Table des matières : [book/table-of-contents.md](book/table-of-contents.md)
 - Roadmap : [ROADMAP.md](ROADMAP.md)
 - Guide de contribution : [CONTRIBUTING.md](CONTRIBUTING.md)
+- [Inventaire provisoire des concepts technologiques](ARCHIVES-TECHNOLOGIQUES/00-INDEX-GENERAL.md) — dossier de repérage distinct du parcours pédagogique; couverture historique encore incomplète.
 
 ## Lire et construire
 
